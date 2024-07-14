@@ -49,7 +49,9 @@
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.2s, opacity 0.5s; /* Added opacity transition */
+  transition:
+    transform 0.2s,
+    opacity 0.5s; /* Added opacity transition */
 }
 
 .image-card:hover {
@@ -57,17 +59,22 @@
 }
 
 .image {
+  border: 2px solid #444;
   width: 100%;
   height: 100%;
   object-fit: cover;
   cursor: pointer;
   opacity: 0; /* Initially hidden */
-  transition: opacity 1s, filter 1s; /* Smooth transition for opacity and filter */
+  transition:
+    opacity 1s,
+    filter 1s; /* Smooth transition for opacity and filter */
   filter: grayscale(100%);
 }
 
 .image-card.fade-in .image {
-  animation: fade-in 1s forwards, colorize 1s 1s forwards; /* Trigger colorize after fade-in */
+  animation:
+    fade-in 1s forwards,
+    colorize 1s 1s forwards; /* Trigger colorize after fade-in */
 }
 
 @keyframes fade-in {

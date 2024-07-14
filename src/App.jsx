@@ -1,12 +1,13 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import HomePage from './pages/homepage/HomePage';
-import Gallery from './pages/gallery/Gallery';
-import AboutUs from './pages/aboutus/AboutUs';
-import ContactPage from './pages/contactpage/ContactPage';
-import ScrollToTop from "./utils/ScrollToTop";
-import Layout from './utils/Layout';
+import React from 'react'
 
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
+
+import AboutUs from './pages/aboutus/AboutUs'
+import ContactPage from './pages/contactpage/ContactPage'
+import Gallery from './pages/gallery/Gallery'
+import HomePage from './pages/homepage/HomePage'
+import Layout from './utils/Layout'
+import ScrollToTop from './utils/ScrollToTop'
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
         </Routes>
       </Layout>
     </Router>
-  );
+  )
 }
 
-export default App;
+export default App

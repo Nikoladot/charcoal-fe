@@ -1,10 +1,12 @@
 import React from 'react'
-import './AlbumSection.css';
-import { albumOneImages } from '../../../../utils/imageImports';
 
-function AlbumRow ({ images }) {
+import PropTypes from 'prop-types'
 
-  const extendedImages = [...images, ...images];
+import { albumOneImages } from '../../../../utils/imageImports'
+import './AlbumSection.css'
+
+function AlbumRow({ images }) {
+  const extendedImages = [...images, ...images]
 
   return (
     <div className="slider">
@@ -16,14 +18,15 @@ function AlbumRow ({ images }) {
         ))}
       </div>
     </div>
-  );
-};
+  )
+}
 
-const AlbumSection = () => {
+AlbumRow.propTypes = {
+  images: PropTypes.arrayOf(PropTypes.string).isRequired
+}
 
-  return (
-      <AlbumRow images={albumOneImages} />
-  );
-};
+function AlbumSection() {
+  return <AlbumRow images={albumOneImages} />
+}
 
-export default AlbumSection;
+export default AlbumSection

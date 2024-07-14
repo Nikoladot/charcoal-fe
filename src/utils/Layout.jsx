@@ -1,13 +1,26 @@
-import React from 'react';
-import Footer from '../footer/Footer'; // Pretpostavljamo da već imaš Footer komponentu
+import React from 'react'
 
-const Layout = ({ children }) => {
+import PropTypes from 'prop-types'
+
+import Footer from '../footer/Footer'
+import ContactNavigation from '../utils/ContactNavigation/ContactNavigation'
+import NavigationMenu from '../utils/NavigationMenu/NavigationMenu'
+
+// Pretpostavljamo da već imaš Footer komponentu
+
+function Layout({ children }) {
   return (
     <div>
       <main>{children}</main>
+      <ContactNavigation />
+      <NavigationMenu />
       <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default Layout;
+Layout.propTypes = {
+  children: PropTypes.node.isRequired
+}
+
+export default Layout

@@ -1,51 +1,150 @@
 .general-info-container {
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 100px;
-    z-index: 3;
-    position: relative;
-    padding: 20px; /* Add padding to allow space for the shadow */
-    overflow: visible; /* Ensure the shadow is not clipped */
-  }
-  
-  .grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    width: 95%;
-    max-height: 100%;
-    overflow: visible; /* Ensure the shadow is not clipped */
-    margin-top: 90px;
-  }
-  
-  .grid-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .grid-item.info-img img {
-    width: 130%; /* Increase width by 30% (85% * 1.3 = 110.5%, rounded to 110%) */
-    height: 500px; /* Increase height by 30% (300px * 1.3 = 390px) */
-    border-radius: 5px;
-    object-fit: fill;
-    background-color: transparent;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 70px;
+  z-index: 3;
+  position: relative;
+  padding: 20px; /* Add padding to allow space for the shadow */
+  overflow: visible; /* Ensure the shadow is not clipped */
 }
 
-  
-  .grid-item.description {
-    line-height: 1.8;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    text-align: start;
-    overflow: hidden;
-    flex-direction: column;
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: 95%;
+  max-height: 100%;
+  overflow: visible; /* Ensure the shadow is not clipped */
+  margin-top: 90px;
+}
 
-  }
-  
+.grid-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-item.info-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  object-fit: cover;
+  background-color: transparent;
+  border: 2px solid #444;
+
+}
+
+.grid-item.description {
+  line-height: 1.8;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: start;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.description > p {
+  font-size: 25px;
+}
+
+/* Adjust description text for medium screens */
+@media (max-width: 1300px) and (min-width: 1191px) {
   .description > p {
-    font-size: 25px;
+    font-size: 24px;
   }
+
+  .description > h1 {
+    font-size: 1.9em;
+  }
+}
+
+/* Stack items in a single column for small screens */
+@media (max-width: 1190px) {
+  .general-info-container {
+    margin-top: 50px;
+    padding: 10px;
+  }
+
+  .grid-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 50px;
+  }
+
+  .grid-item {
+    width: 100%;
+    margin-bottom: 20px; /* Add margin between items */
+  }
+
+  .description > p {
+    font-size: 18px;
+  }
+
+  .first-img {
+    order: 2;
+  }
+
+  .first-description {
+    order: 1;
+  }
+
+  .second-img {
+    order: 4;
+  }
+
+  .second-description {
+    order: 3;
+  }
+
+  .third-img {
+    order: 6;
+  }
+
+  .third-description {
+    order: 5;
+  }
+}
+
+/* Further adjustments for extra small screens */
+@media (max-width: 480px) {
+  .general-info-container {
+    margin-top: 20px;
+    padding: 5px;
+  }
+
+  .description > p {
+    font-size: 16px;
+  }
+
+  .grid-container .grid-item {
+    width: 100%;
+  }
+
+  .first-img {
+    order: 2;
+  }
+
+  .first-description {
+    order: 1;
+  }
+
+  .second-img {
+    order: 4;
+  }
+
+  .second-description {
+    order: 3;
+  }
+
+  .third-img {
+    order: 6;
+  }
+
+  .third-description {
+    order: 5;
+  }
+}

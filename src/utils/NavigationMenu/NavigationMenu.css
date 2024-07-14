@@ -28,7 +28,7 @@
 @keyframes dropdownAnimation {
   0% {
     opacity: 0;
-    transform: translateY(0) scaleY(1) ;
+    transform: translateY(0) scaleY(1);
   }
   100% {
     opacity: 1;
@@ -47,9 +47,8 @@
 
 .menu-item:hover {
   background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 5px; 
+  border-radius: 5px;
 }
-
 
 /* Hamburger Icon Styles */
 .nav-icon {
@@ -62,7 +61,9 @@
   z-index: 25;
   background: #fff;
   border-radius: 25px;
-  transition: transform 1s ease-in-out, background 0.25s ease-in-out; /* Separate transitions for different effects */
+  transition:
+    transform 1s ease-in-out,
+    background 0.25s ease-in-out; /* Separate transitions for different effects */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -82,14 +83,16 @@
   background: transparent;
 }
 
-.hamburger-bar:before, 
+.hamburger-bar:before,
 .hamburger-bar:after {
   content: '';
   position: absolute;
   width: 18px;
   height: 1px;
   background: #000;
-  transition: transform 0.5s ease-in-out, background 0.25s ease-in-out; /* Separate transitions for different effects */
+  transition:
+    transform 0.5s ease-in-out,
+    background 0.25s ease-in-out; /* Separate transitions for different effects */
 }
 
 .hamburger-bar:before {

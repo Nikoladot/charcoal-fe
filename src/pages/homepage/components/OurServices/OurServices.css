@@ -1,44 +1,45 @@
 .our-services {
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 100px;
-    z-index: 3;
-    position: relative;
-    padding: 20px;
-    overflow: visible;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  z-index: 3;
+  position: relative;
+  padding: 20px;
+  overflow: visible;
+  max-height: 110vh;
 }
 
 .our-services-title {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .our-services-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .card {
-    margin: 10px;
-    padding: 10px;
-    border-radius: 5px;
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .card-description {
-    text-align: center;
-    font-size: 22px;
+  text-align: center;
+  font-size: 22px;
 }
 
 .card-image {
-    width: 100%;
-    height: 800px;
-    object-fit: none;
-    border-radius: 5px;
-    margin-top: -70px;
+  width: 100%;
+  height: 800px;
+  object-fit: none;
+  border-radius: 5px;
+  margin-top: -70px;
 }

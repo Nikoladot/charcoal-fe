@@ -1,69 +1,68 @@
 .contact-page {
-    display: flex;
-    color: white;
-    min-height: 90vh; /* Minimum 90% of viewport height */
-    flex-wrap: wrap;
-    position: relative;
+  display: flex;
+  color: white;
+  min-height: 90vh; /* Minimum 90% of viewport height */
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.contact-left {
+  flex: 1;
+  display: flex;
+  max-height: 100vh; /* Inherit height from parent */
+}
+
+.contact-image {
+  max-width: 100%;
+  width: auto;
+  height: auto; /* Allow image to scale naturally */
+}
+
+.contact-right {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribute content vertically */
+  padding-left: 20px;
+  padding-right: 50px;
+}
+
+.right-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Take full height of parent */
+}
+
+.contact-info {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px; /* Space between contact info and form */
+}
+
+@media (max-width: 768px) {
+  .contact-page {
+    padding: 20px;
   }
-  
+
   .contact-left {
-    flex: 1;
-    display: flex;
-    max-height: 100vh; /* Inherit height from parent */
+    margin-bottom: 20px;
+    margin-top: 20px;
   }
-  
+
   .contact-image {
-    max-width: 100%;
-    width: auto;
+    width: 90%;
     height: auto; /* Allow image to scale naturally */
   }
-  
+
   .contact-right {
-    position: relative;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Distribute content vertically */
-    padding-left: 20px;
-    padding-right: 50px;
+    padding-left: 0;
   }
-  
-  .right-content {
-    display: flex;
-    flex-direction: column;
-    height: 100%; /* Take full height of parent */
+}
+
+@media (max-width: 480px) {
+  .contact-left {
+    flex: 100%; /* Take full width on smaller screens */
+    align-items: center;
   }
-  
-  .contact-info {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 20px; /* Space between contact info and form */
-  }
-  
-  @media (max-width: 768px) {
-    .contact-page {
-      padding: 20px;
-    }
-  
-    .contact-left {
-      margin-bottom: 20px;
-      margin-top: 20px;
-    }
-  
-    .contact-image {
-      width: 90%;
-      height: auto; /* Allow image to scale naturally */
-    }
-  
-    .contact-right {
-      padding-left: 0;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .contact-left {
-      flex: 100%; /* Take full width on smaller screens */
-      align-items: center;
-    }
-  }
-  
+}

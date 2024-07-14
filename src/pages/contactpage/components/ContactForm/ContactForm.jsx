@@ -1,35 +1,40 @@
-import { useState } from 'react';
-import emailjs from '@emailjs/browser';
-import './ContactForm.css';
+import { useState } from 'react'
 
-const ContactForm = () => {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [stateMessage, setStateMessage] = useState(null);
+import emailjs from '@emailjs/browser'
+import './ContactForm.css'
+
+function ContactForm() {
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [stateMessage, setStateMessage] = useState(null)
 
   const sendEmail = (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+    e.preventDefault()
+    setIsSubmitting(true)
 
-    emailjs.sendForm(
-      process.env.REACT_APP_SERVICE_ID,
-      process.env.REACT_APP_TEMPLATE_ID,
-      e.target,
-      process.env.REACT_APP_PUBLIC_KEY
-    ).then(
-      (result) => {
-        setStateMessage('Message sent!');
-        setIsSubmitting(false);
-        setTimeout(() => setStateMessage(null), 5000);
-      },
-      (error) => {
-        setStateMessage('Something went wrong, please try again later');
-        setIsSubmitting(false);
-        setTimeout(() => setStateMessage(null), 5000);
-      }
-    );
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
+        e.target,
+        process.env.REACT_APP_PUBLIC_KEY
+      )
+      .then(
+        () => {
+          // Successfully sent email
+          setStateMessage('Message sent!')
+          setIsSubmitting(false)
+          setTimeout(() => setStateMessage(null), 5000)
+        },
+        () => {
+          // Error sending email
+          setStateMessage('Something went wrong, please try again later')
+          setIsSubmitting(false)
+          setTimeout(() => setStateMessage(null), 5000)
+        }
+      )
 
-    e.target.reset();
-  };
+    e.target.reset()
+  }
 
   return (
     <form className="form-container" onSubmit={sendEmail}>
@@ -42,7 +47,7 @@ const ContactForm = () => {
       <input type="submit" value="Send" className="form-submit" disabled={isSubmitting} />
       {stateMessage && <p>{stateMessage}</p>}
     </form>
-  );
-};
+  )
+}
 
-export default ContactForm;
+export default ContactForm

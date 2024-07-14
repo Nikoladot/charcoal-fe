@@ -7,10 +7,9 @@
   }
 }
 
-
 .slider {
   border-radius: 20px;
-  margin: 30px auto; 
+  margin: 30px auto;
   margin-top: 100px;
   overflow: hidden;
   position: relative;
@@ -41,9 +40,8 @@
 }
 
 .slide > img:hover {
-transform: translateZ(5px);
+  transform: translateZ(5px);
 }
-
 
 .slider::before,
 .slider::after {
@@ -64,4 +62,3 @@ transform: translateZ(5px);
   right: 0;
   transform: rotateZ(180deg);
 }
-

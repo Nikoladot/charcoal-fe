@@ -1,21 +1,23 @@
-import React from 'react';
-import './LightBox.css'; // Ensure this CSS file is defined with appropriate styles
+import React from 'react'
 
-const Lightbox = ({ images, currentIndex, onClose, onNext, onPrev }) => {
+import PropTypes from 'prop-types'
+import './LightBox.css'
+
+function Lightbox({ images, currentIndex, onClose, onNext, onPrev }) {
   const handleNext = () => {
-    onNext();
-  };
+    onNext()
+  }
 
   const handlePrev = () => {
-    onPrev();
-  };
+    onPrev()
+  }
 
   const handleClose = (e) => {
     // Check if the click was outside the image content
     if (e.target.classList.contains('lightbox-overlay')) {
-      onClose();
+      onClose()
     }
-  };
+  }
 
   return (
     <div className="lightbox-overlay" onClick={handleClose}>
@@ -31,7 +33,15 @@ const Lightbox = ({ images, currentIndex, onClose, onNext, onPrev }) => {
         <img src={images[currentIndex]} alt={`Image ${currentIndex}`} className="lightbox-image" />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Lightbox;
+Lightbox.propTypes = {
+  images: PropTypes.arrayOf(PropTypes.string).isRequired,
+  currentIndex: PropTypes.number.isRequired,
+  onClose: PropTypes.func.isRequired,
+  onNext: PropTypes.func.isRequired,
+  onPrev: PropTypes.func.isRequired
+}
+
+export default Lightbox

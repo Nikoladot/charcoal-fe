@@ -1,15 +1,14 @@
-import React from 'react';
-import ContactForm from './components/ContactForm/ContactForm';
-import './ContactPage.css';
-import image from '../../assets/albumone/Charcoal-2.png';
-import ContactNavigation from '../homepage/components/ContactNavigation/ContactNavigation';
-import NavigationMenu from '../homepage/components/NavigationMenu/NavigationMenu';
+import React from 'react'
 
-const ContactPage = () => {
+import ContactForm from './components/ContactForm/ContactForm'
+
+import image from '../../assets/albumone/Charcoal-2.png'
+
+import './ContactPage.css'
+
+function ContactPage() {
   return (
     <div className="contact-page">
-      <ContactNavigation />
-      <NavigationMenu />
       <div className="contact-left">
         <img src={image} alt="Contact" className="contact-image" />
       </div>
@@ -28,7 +27,7 @@ const ContactPage = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ContactPage;
+export default ContactPage

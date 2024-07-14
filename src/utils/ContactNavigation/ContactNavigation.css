@@ -1,0 +1,25 @@
+.social-media-icons {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px; /* Adjust as needed */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Adjust spacing between icons */
+  background-color: transparent; /* Set background color to transparent */
+  border: none; /* Remove border */
+  padding: 0; /* Remove padding */
+  width: 20px; /* Set width */
+  height: 160px; /* Set height */
+  z-index: 999; /* Set a higher z-index value to ensure it's displayed over other elements */
+}
+
+.icon {
+  color: white; /* Adjust the color as needed */
+  transition: transform 0.3s ease;
+}
+
+.icon:hover {
+  transform: scale(1.5);
+}
