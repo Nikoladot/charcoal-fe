@@ -6,9 +6,6 @@ import './index.css';
 
 const basename = process.env.NODE_ENV === 'production' ? '/charcoal-fe' : '/';
 
-console.log('Environment:', process.env.NODE_ENV);
-console.log('Basename:', basename);
-
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter basename={basename}>
