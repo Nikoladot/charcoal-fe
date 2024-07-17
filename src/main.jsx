@@ -1,12 +1,18 @@
-import React from 'react'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
+import App from './App';
+import './index.css';
 
-import ReactDOM from 'react-dom/client'
+const basename = process.env.NODE_ENV === 'production' ? '/charcoal-fe' : '/';
 
-import App from './App.jsx'
-import './index.css'
+console.log('Environment:', process.env.NODE_ENV);
+console.log('Basename:', basename);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter basename={basename}>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>
-)
+);
