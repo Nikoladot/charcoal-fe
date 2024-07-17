@@ -11,8 +11,8 @@
 
 .text-overlay {
   position: absolute;
-  top: 200px; /* Adjust as needed */
-  left: 50%; /* Adjust as needed */
+  top: 10%; /* Adjust as needed to move the entire overlay up */
+  left: 50%;
   transform: translateX(-50%);
   text-align: center;
 }
@@ -41,9 +41,9 @@
 
 .logo-fade {
   position: absolute;
-  top: 50%;
+  top: 10%; /* Move to the same position as the logo */
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 0); /* Adjust transform to remove vertical centering */
   width: 520px; /* Slightly larger than the logo */
   height: 270px; /* Slightly larger than the logo */
   background: radial-gradient(
@@ -62,6 +62,10 @@
 }
 
 .logo {
+  position: absolute;
+  top: 10%; /* Move to the same position as the logo-fade */
+  left: 50%;
+  transform: translate(-50%, 0); /* Center horizontally, remove vertical centering */
   width: 500px;
   height: 220px;
 }

@@ -1,8 +1,8 @@
 import React from 'react'
 
 // Ensure you create this CSS file or include these styles in your global styles
-import imageOne from '../../../../assets/bags.png'
-import imageTwo from '../../../../assets/dzak1.png'
+import imageOne from '../../../../assets/wholesale.jpg'
+import imageTwo from '../../../../assets/bag.jpg'
 import './OurServices.css'
 
 function OurServices() {

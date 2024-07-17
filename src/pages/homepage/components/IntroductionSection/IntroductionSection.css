@@ -1,36 +1,61 @@
 .introduction-section {
   position: absolute;
-  top: 75%; /* Start from the bottom half */
+  bottom: 20vh; /* Adjust as needed to fit the red box position */
   left: 50%;
-  transform: translate(-50%, 0); /* Center horizontally */
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
   color: white;
-  z-index: 2; /* Ensure it's above other content */
-  width: 75%; /* Increased width */
-  border-radius: 15px; /* Rounded corners */
-  height: 35vh; /* Set height to 30% of the viewport height */
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
-  overflow: hidden; /* Prevent overflow */
+  font-size: 32px;
+  animation: fadeIn 2s ease-in-out; /* Fade-in animation */
 }
 
-/* Media queries for different screen sizes */
-@media (max-width: 1200px) {
+.introduction-section span {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+/* Responsive Typography */
+@media (min-width: 1200px) {
   .introduction-section {
-    height: 35vh; /* Adjust height for smaller screens */
+    font-size: 32px; /* Large desktops and monitors */
   }
 }
 
-@media (max-width: 768px) {
+@media (min-width: 992px) and (max-width: 1199px) {
   .introduction-section {
-    height: 40vh; /* Adjust height for even smaller screens */
-    padding: 30px 40px; /* Adjust padding for smaller screens */
-    font-size: 24px;
+    font-size: 28px; /* Medium desktops and laptops */
   }
 }
 
-@media (max-width: 480px) {
+@media (min-width: 768px) and (max-width: 991px) {
   .introduction-section {
-    height: 50vh; /* Adjust height for very small screens */
-    padding: 20px 30px; /* Adjust padding for very small screens */
-    font-size: 20px;
+    font-size: 24px; /* Small desktops and large tablets */
   }
 }
+
+@media (min-width: 600px) and (max-width: 767px) {
+  .introduction-section {
+    font-size: 20px; /* Tablets and large mobile devices */
+  }
+}
+
+@media (max-width: 599px) {
+  .introduction-section {
+    font-size: 16px; /* Medium to small mobile devices */
+  }
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(20px); /* Ensure translateX is set to -50% */
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0); /* Ensure translateX is set to -50% */
+  }
+}
+
