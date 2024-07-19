@@ -1,10 +1,8 @@
 import React from 'react'
 
-import ContactForm from './components/ContactForm/ContactForm'
-
-import image from '../../assets/albumone/Charcoal-2.png'
-
+import image from '../../assets/albumone/image1.jpg'
 import './ContactPage.css'
+import ContactForm from './components/ContactForm/ContactForm'
 
 function ContactPage() {
   return (

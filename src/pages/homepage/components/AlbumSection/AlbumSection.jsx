@@ -13,7 +13,7 @@ function AlbumRow({ images }) {
       <div className="slide-track">
         {extendedImages.map((image, index) => (
           <div className="slide" key={index}>
-            <img src={image} alt={`Image ${index}`} />
+            <img src={image} alt={`description ${index}`} />
           </div>
         ))}
       </div>

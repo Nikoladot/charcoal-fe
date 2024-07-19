@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 
 import emailjs from '@emailjs/browser'
 import './ContactForm.css'
@@ -38,13 +38,41 @@ function ContactForm() {
 
   return (
     <form className="form-container" onSubmit={sendEmail}>
-      <label className="form-label">Name</label>
-      <input type="text" name="user_name" className="form-input" required />
-      <label className="form-label">Email</label>
-      <input type="email" name="user_email" className="form-input" required />
-      <label className="form-label">Message</label>
-      <textarea name="message" className="form-textarea" required />
-      <input type="submit" value="Send" className="form-submit" disabled={isSubmitting} />
+      <label className="form-label" htmlFor="user_name">
+        Name
+      </label>
+      <input
+        type="text"
+        id="user_name"
+        name="user_name"
+        className="form-input"
+        required
+      />
+      <label className="form-label" htmlFor="user_email">
+        Email
+      </label>
+      <input
+        type="email"
+        id="user_email"
+        name="user_email"
+        className="form-input"
+        required
+      />
+      <label className="form-label" htmlFor="message">
+        Message
+      </label>
+      <textarea
+        id="message"
+        name="message"
+        className="form-textarea"
+        required
+      />
+      <input
+        type="submit"
+        value="Send"
+        className="form-submit"
+        disabled={isSubmitting}
+      />
       {stateMessage && <p>{stateMessage}</p>}
     </form>
   )

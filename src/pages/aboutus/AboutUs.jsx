@@ -1,9 +1,8 @@
 import React from 'react'
 
-import secondImage from '../../assets/albumone/image.jpg'
+import secondImage from '../../assets/albumone/image1.jpg'
 // replace with actual image path
 import firstImage from '../../assets/fire.jpg'
-
 import './AboutUs.css'
 
 function AboutUs() {
@@ -13,12 +12,13 @@ function AboutUs() {
         <div className="text-content txt-cntn-one">
           <h1>About Us</h1>
           <p>
-            YLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et metus non felis
-            ullamcorper tincidunt. Vivamus euismod justo in nunc aliquet, at hendrerit erat
-            elementum. Proin cursus orci vitae erat aliquam, id tincidunt nulla feugiat.
-            Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
-            egestas. Suspendisse potenti. Sed feugiat sapien at libero facilisis, et tristique ex
-            fringilla.
+            YLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et
+            metus non felis ullamcorper tincidunt. Vivamus euismod justo in nunc
+            aliquet, at hendrerit erat elementum. Proin cursus orci vitae erat
+            aliquam, id tincidunt nulla feugiat. Pellentesque habitant morbi
+            tristique senectus et netus et malesuada fames ac turpis egestas.
+            Suspendisse potenti. Sed feugiat sapien at libero facilisis, et
+            tristique ex fringilla.
           </p>
         </div>
         <div className="image-container right-image">
@@ -33,12 +33,13 @@ function AboutUs() {
         <div className="text-content txt-cntn-two">
           <h1>Our Team</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et metus non felis
-            ullamcorper tincidunt. Vivamus euismod justo in nunc aliquet, at hendrerit erat
-            elementum. Proin cursus orci vitae erat aliquam, id tincidunt nulla feugiat.
-            Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
-            egestas. Suspendisse potenti. Sed feugiat sapien at libero facilisis, et tristique ex
-            fringilla.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et
+            metus non felis ullamcorper tincidunt. Vivamus euismod justo in nunc
+            aliquet, at hendrerit erat elementum. Proin cursus orci vitae erat
+            aliquam, id tincidunt nulla feugiat. Pellentesque habitant morbi
+            tristique senectus et netus et malesuada fames ac turpis egestas.
+            Suspendisse potenti. Sed feugiat sapien at libero facilisis, et
+            tristique ex fringilla.
           </p>
         </div>
       </section>

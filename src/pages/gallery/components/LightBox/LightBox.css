@@ -17,11 +17,16 @@
   height: 70%; /* Adjust as needed */
   max-width: 800px; /* Maximum width for the lightbox */
   max-height: 600px; /* Maximum height for the lightbox */
-  background-color: rgb(22, 21, 21); /* Background color for the lightbox content */
+  background-color: rgb(
+    22,
+    21,
+    21
+  ); /* Background color for the lightbox content */
   border-radius: 10px;
   overflow: hidden; /* Ensures content doesn't overflow */
   box-shadow: 10px 20px 20px 20px rgba(0, 0, 0, 0.625); /* Optional: Box shadow for a more pronounced effect */
-  border: 2px solid #444;}
+  border: 2px solid #444;
+}
 
 .lightbox-navigation {
   position: absolute;

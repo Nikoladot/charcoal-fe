@@ -10,7 +10,10 @@ function Footer() {
         <div className="footer-content">
           <div className="footer-section about">
             <h2>About Us</h2>
-            <p>We are a company dedicated to providing the best services in our industry.</p>
+            <p>
+              We are a company dedicated to providing the best services in our
+              industry.
+            </p>
             <p>Contact us at: info@company.com</p>
           </div>
 

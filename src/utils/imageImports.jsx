@@ -1,27 +1,29 @@
-import RandomImage from '@/assets/albumone/81qvrOwMnuS._AC_UF350,350_QL80_.jpg'
-import Adzletuubvwnofkgsd9 from '@/assets/albumone/adzletuubvw8nofkgsd9.webp'
-import Charcoal2 from '@/assets/albumone/Charcoal-2.png'
-import CharcoalBurning from '@/assets/albumone/Charcoal-burning.webp'
-import TwoZoneGrillingHero from '@/assets/albumone/EP_06142016_twozone_grilling_hero2.webp'
-import HandLightingCharcoal from '@/assets/albumone/Hand-Lighting-Charcoal-Grill-732x549-thumbnail.avif'
-import HardwoodLumpCharcoal from '@/assets/albumone/hardwood-lump-charcoal-jpg.jpg'
-import Image from '@/assets/albumone/image.jpg'
-import MakeYourOwnCharcoal from '@/assets/albumone/make-your-own-charcoal.jpg'
-import NaturalWoodCharcoal from '@/assets/albumone/natural-wood-solid-black-charcoal-for-tandoor-with-3-4-hours-burning-time-565.webp'
-import PhilleighWayLumpwoodCharcoal from '@/assets/albumone/Philleigh-Way-lumpwood-charcoal-soc.jpg'
-import Undefined from '@/assets/albumone/undefined.webp'
+import Image1 from '@/assets/albumone/image1.jpg'
+import Image10 from '@/assets/albumone/image10.webp'
+import Image11 from '@/assets/albumone/image11.webp'
+import Image12 from '@/assets/albumone/image12.png'
+import Image13 from '@/assets/albumone/image13.webp'
+import Image2 from '@/assets/albumone/image2.jpg'
+import Image3 from '@/assets/albumone/image3.jpg'
+import Image4 from '@/assets/albumone/image4.jpg'
+import Image5 from '@/assets/albumone/image5.webp'
+import Image6 from '@/assets/albumone/image6.jpg'
+import Image7 from '@/assets/albumone/image7.webp'
+import Image8 from '@/assets/albumone/image8.jpg'
+import Image9 from '@/assets/albumone/image9.avif'
 
 export const albumOneImages = [
-  Charcoal2,
-  HardwoodLumpCharcoal,
-  MakeYourOwnCharcoal,
-  NaturalWoodCharcoal,
-  TwoZoneGrillingHero,
-  HandLightingCharcoal,
-  Image,
-  RandomImage,
-  Adzletuubvwnofkgsd9,
-  CharcoalBurning,
-  PhilleighWayLumpwoodCharcoal,
-  Undefined
+  Image1,
+  Image2,
+  Image3,
+  Image4,
+  Image5,
+  Image6,
+  Image7,
+  Image8,
+  Image9,
+  Image10,
+  Image11,
+  Image12,
+  Image13
 ]

@@ -20,7 +20,17 @@ function Lightbox({ images, currentIndex, onClose, onNext, onPrev }) {
   }
 
   return (
-    <div className="lightbox-overlay" onClick={handleClose}>
+    <div
+      className="lightbox-overlay"
+      onClick={handleClose}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          handleClose()
+        }
+      }}
+    >
       <div className="lightbox-content">
         <div className="lightbox-navigation">
           <button className="lightbox-arrow lightbox-prev" onClick={handlePrev}>
@@ -30,7 +40,11 @@ function Lightbox({ images, currentIndex, onClose, onNext, onPrev }) {
             &gt;
           </button>
         </div>
-        <img src={images[currentIndex]} alt={`Image ${currentIndex}`} className="lightbox-image" />
+        <img
+          src={images[currentIndex]}
+          alt={`Description  ${currentIndex}`}
+          className="lightbox-image"
+        />
       </div>
     </div>
   )

@@ -1,11 +1,11 @@
-import React from 'react';
-import { Route, Routes } from 'react-router-dom';
-import AboutUs from './pages/aboutus/AboutUs';
-import ContactPage from './pages/contactpage/ContactPage';
-import Gallery from './pages/gallery/Gallery';
-import HomePage from './pages/homepage/HomePage';
-import Layout from './utils/Layout';
-import ScrollToTop from './utils/ScrollToTop';
+import React from 'react'
+import { Route, Routes } from 'react-router-dom'
+import AboutUs from './pages/aboutus/AboutUs'
+import ContactPage from './pages/contactpage/ContactPage'
+import Gallery from './pages/gallery/Gallery'
+import HomePage from './pages/homepage/HomePage'
+import Layout from './utils/Layout'
+import ScrollToTop from './utils/ScrollToTop'
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
         </Routes>
       </Layout>
     </>
-  );
+  )
 }
 
-export default App;
+export default App

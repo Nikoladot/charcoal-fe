@@ -45,7 +45,11 @@
 
 .slider::before,
 .slider::after {
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.941), rgba(0, 0, 0, 0) 57%);
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.941),
+    rgba(0, 0, 0, 0) 57%
+  );
   content: '';
   height: 100%;
   position: absolute;

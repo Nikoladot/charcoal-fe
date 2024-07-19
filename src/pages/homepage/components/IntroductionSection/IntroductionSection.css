@@ -3,11 +3,12 @@
   bottom: 20vh; /* Adjust as needed to fit the red box position */
   left: 50%;
   transform: translateX(-50%);
-  width: 100%;
+  width: 85%;
   text-align: center;
   color: white;
   font-size: 32px;
   animation: fadeIn 2s ease-in-out; /* Fade-in animation */
+  z-index: 3;
 }
 
 .introduction-section span {
@@ -58,4 +59,3 @@
     transform: translateX(-50%) translateY(0); /* Ensure translateX is set to -50% */
   }
 }
-

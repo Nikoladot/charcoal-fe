@@ -8,19 +8,19 @@
   height: 140px; /* Further increase height to extend the transition */
   background: linear-gradient(
     to top,
-    #0a0a0a 0%, /* Darker shade of the footer color */
-    rgba(10, 10, 10, 0.95) 10%, 
-    rgba(11, 11, 11, 0.85) 20%, 
-    rgba(12, 12, 12, 0.75) 30%, 
-    rgba(13, 13, 13, 0.65) 40%, 
-    rgba(14, 14, 14, 0.55) 50%, 
-    rgba(15, 15, 15, 0.45) 60%, 
-    rgba(16, 16, 16, 0.35) 70%, 
-    rgba(17, 17, 17, 0.25) 80%, 
-    rgba(18, 18, 18, 0.15) 90%, 
-    rgba(19, 19, 19, 0.10) 95%, 
-    rgba(20, 20, 20, 0.08) 98%, 
-    rgba(18, 18, 18, 0.05) 100%, 
+    #0a0a0a 0%,
+    /* Darker shade of the footer color */ rgba(10, 10, 10, 0.95) 10%,
+    rgba(11, 11, 11, 0.85) 20%,
+    rgba(12, 12, 12, 0.75) 30%,
+    rgba(13, 13, 13, 0.65) 40%,
+    rgba(14, 14, 14, 0.55) 50%,
+    rgba(15, 15, 15, 0.45) 60%,
+    rgba(16, 16, 16, 0.35) 70%,
+    rgba(17, 17, 17, 0.25) 80%,
+    rgba(18, 18, 18, 0.15) 90%,
+    rgba(19, 19, 19, 0.1) 95%,
+    rgba(20, 20, 20, 0.08) 98%,
+    rgba(18, 18, 18, 0.05) 100%,
     transparent 100%
   );
   border-bottom: 1px solid #444;

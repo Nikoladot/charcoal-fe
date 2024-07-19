@@ -1,17 +1,20 @@
 import React, { useEffect, useState } from 'react'
 
-import LightBox from './componets/LightBox/LightBox'
 import { albumOneImages } from '../../utils/imageImports'
-
 import './Gallery.css'
+import LightBox from './components/LightBox/LightBox'
 
 function Gallery() {
   const [showLightbox, setShowLightbox] = useState(false)
   const [currentIndex, setCurrentIndex] = useState(0)
-  const [visibleImages, setVisibleImages] = useState(Array(albumOneImages.length).fill(false))
+  const [visibleImages, setVisibleImages] = useState(
+    Array(albumOneImages.length).fill(false)
+  )
 
   useEffect(() => {
-    const staggeredIndexes = [...Array(Math.min(6, albumOneImages.length)).keys()]
+    const staggeredIndexes = [
+      ...Array(Math.min(6, albumOneImages.length)).keys()
+    ]
     const remainingIndexes = [...Array(albumOneImages.length).keys()].slice(6)
 
     staggeredIndexes.forEach((index, i) => {
@@ -49,7 +52,16 @@ function Gallery() {
   }
 
   const handlePrev = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + albumOneImages.length) % albumOneImages.length)
+    setCurrentIndex(
+      (prevIndex) =>
+        (prevIndex - 1 + albumOneImages.length) % albumOneImages.length
+    )
+  }
+
+  const handleKeyDown = (e, index) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      openLightbox(index)
+    }
   }
 
   return (
@@ -65,9 +77,12 @@ function Gallery() {
           <div
             key={index}
             className={`image-card ${visibleImages[index] ? 'fade-in' : ''}`}
+            role="button"
+            tabIndex={0}
             onClick={() => openLightbox(index)}
+            onKeyDown={(e) => handleKeyDown(e, index)}
           >
-            <img src={src} alt={`Image ${index}`} className="image" />
+            <img src={src} alt={`description ${index}`} className="image" />
           </div>
         ))}
       </div>

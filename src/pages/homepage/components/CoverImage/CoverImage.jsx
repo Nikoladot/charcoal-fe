@@ -1,8 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import logo from '../../../../assets/logo.png';
-import './CoverImage.css';
-import IntroductionSection from '../IntroductionSection/IntroductionSection';
+import React from 'react'
+
+import PropTypes from 'prop-types'
+
+import logo from '../../../../assets/logo.png'
+import IntroductionSection from '../IntroductionSection/IntroductionSection'
+import './CoverImage.css'
 
 function CoverImage({ image }) {
   return (
@@ -15,11 +17,11 @@ function CoverImage({ image }) {
       <IntroductionSection />
       <div className="bottom-fade"></div>
     </div>
-  );
+  )
 }
 
 CoverImage.propTypes = {
-  image: PropTypes.string.isRequired,
-};
+  image: PropTypes.string.isRequired
+}
 
-export default CoverImage;
+export default CoverImage

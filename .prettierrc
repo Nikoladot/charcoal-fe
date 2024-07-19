@@ -1,20 +1,7 @@
 {
+  "trailingComma": "none",
   "semi": false,
   "singleQuote": true,
-  "trailingComma": "none",
-  "printWidth": 100,
-  "tabWidth": 2,
-  "endOfLine": "auto",
-  "plugins": ["@trivago/prettier-plugin-sort-imports"],
-  "importOrder": [
-    "^react$", 
-    "^@?\\w", 
-    "^../homepage/components/(.*)$",
-    "^../../assets/(.*)$",
-    "^[../]", 
-    "^[./]", 
-    "^index"
-  ],
-  "importOrderSeparation": true,
-  "importOrderSortSpecifiers": true
+  "printWidth": 80,
+  "tabWidth": 2
 }
