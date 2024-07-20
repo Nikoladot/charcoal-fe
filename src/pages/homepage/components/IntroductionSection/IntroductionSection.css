@@ -17,22 +17,23 @@
   border-radius: 10px;
 }
 
+
 /* Responsive Typography */
-@media (min-width: 1200px) {
+@media (max-width: 1400px) {
   .introduction-section {
-    font-size: 32px; /* Large desktops and monitors */
+    font-size: 30px; /* Large desktops and monitors */
   }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
   .introduction-section {
-    font-size: 28px; /* Medium desktops and laptops */
+    font-size: 26px; /* Medium desktops and laptops */
   }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
   .introduction-section {
-    font-size: 24px; /* Small desktops and large tablets */
+    font-size: 22px; /* Small desktops and large tablets */
   }
 }
 

@@ -3,9 +3,5 @@
   height: auto;
   display: flex;
   flex-direction: column;
-}
-
-body {
-  padding: 0;
-  margin: 0;
+  flex: 1;
 }
