@@ -17,27 +17,6 @@
   text-align: center;
 }
 
-.text-overlay h1 {
-  font-size: 70px;
-  color: rgba(255, 255, 255, 0.644); /* Semi-transparent light gray text */
-  position: relative; /* Ensure z-index works */
-  letter-spacing: 3px; /* Increase letter spacing */
-  word-spacing: 10px; /* Increase word spacing */
-}
-
-.text-overlay h1::after {
-  content: '';
-  position: absolute;
-  top: -10px; /* Adjust to fit the text */
-  left: -10px; /* Adjust to fit the text */
-  right: -10px; /* Adjust to fit the text */
-  bottom: -10px; /* Adjust to fit the text */
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-  filter: blur(20px); /* Increased blur effect */
-  z-index: -1; /* Ensure it's behind the text */
-  border-radius: 10px; /* Add border-radius for smooth edges */
-}
-
 .logo-fade {
   position: absolute;
   top: 10%; /* Move to the same position as the logo */
@@ -90,4 +69,69 @@
     rgba(20, 20, 20, 0.2) 80%,
     transparent 100%
   );
+}
+
+/* Responsive Styles */
+@media (max-width: 1400px) {
+  .logo-fade {
+    width: 760px;
+    height: 390px;
+  }
+
+  .logo {
+    width: 690px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .logo-fade {
+    width: 690px;
+    height: 350px;
+  }
+
+  .logo {
+    width: 670px;
+    height: 330px;
+  }
+}
+
+@media (max-width: 991px) {
+  .logo-fade {
+    width: 520px;
+    height: 270px;
+  }
+
+  .logo {
+    width: 500px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 500px) {
+  .logo-fade {
+    width: 380px;
+    height: 200px;
+    top: 5vh;
+  }
+
+  .logo {
+    width: 360px;
+    height: 180px;
+    top: 5vh;
+  }
+}
+
+@media (max-width: 375px) {
+  .logo-fade {
+    width: 320px;
+    height: 170px;
+    top: 5vh;
+  }
+
+  .logo {
+    width: 300px;
+    height: 150px;
+    top: 5vh;
+  }
 }
