@@ -2,7 +2,7 @@ import React from 'react'
 
 import PropTypes from 'prop-types'
 
-import logo from '../../../../assets/logo.png'
+import logo from '../../../../assets/Logo/logo-transparent-png.png'
 import IntroductionSection from '../IntroductionSection/IntroductionSection'
 import './CoverImage.css'
 
