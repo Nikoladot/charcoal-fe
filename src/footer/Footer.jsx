@@ -68,13 +68,6 @@ function Footer() {
             </div>
           </div>
 
-          <div className="footer-section newsletter">
-            <h2>Newsletter</h2>
-            <form>
-              <input type="email" placeholder="Your email" />
-              <button type="submit">Subscribe</button>
-            </form>
-          </div>
         </div>
 
         <div className="footer-bottom">
