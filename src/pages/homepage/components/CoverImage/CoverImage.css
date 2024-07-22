@@ -74,13 +74,13 @@
 /* Responsive Styles */
 @media (max-width: 1400px) {
   .logo-fade {
-    width: 760px;
-    height: 390px;
+    width: 420px;
+    height: 220px;
   }
 
   .logo {
-    width: 690px;
-    height: 300px;
+    width: 400px;
+    height: 200px;
   }
 }
 
@@ -130,7 +130,7 @@
   }
 
   .logo {
-    width: 300px;
+    width: 340px;
     height: 150px;
     top: 5vh;
   }
