@@ -32,12 +32,14 @@
 
 .footer-content {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-between;
   padding: 0 50px;
+  text-align: center;
 }
 
 .footer-section {
-  margin: 10px;
+  flex: 1;
+  margin: 0 10px;
 }
 
 .footer-section h2 {
@@ -67,22 +69,28 @@
   text-decoration: underline;
 }
 
+.footer-section h2,
+.footer-section p,
+.footer-section ul {
+  margin-top: 20px; /* Adjust this value to ensure consistent spacing */
+}
+
 .social-icons {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .social-icons a {
   color: #fff;
-  margin-right: 10px;
+  margin: 5px 10px;
   font-size: 24px;
   display: inline-block;
   transition: color 0.3s;
-  width: 50%; /* For two columns */
 }
 
 .social-icons a:hover {
-  color: #ccc; /* Change color on hover */
+  color: #ccc;
 }
 
 .footer-bottom {
@@ -91,111 +99,86 @@
   border-top: 1px solid #444;
 }
 
-.links {
-  line-height: 1.5;
-}
-
-/* Responsive Styles */
-@media (min-width: 769px) {
-  .footer-content {
-    justify-content: space-between;
-  }
-
-  .footer-content .about {
-    flex: 1 100%;
-  }
-
-  .footer-content .links-follow-us-row {
-    display: flex;
-    flex: 1;
-    justify-content: space-between;
-  }
-
-  .footer-section.links,
-  .footer-section.social {
-    flex: 1;
-  }
-
-  .social-icons {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .social-icons a {
-    width: 50%; /* For two columns */
-    margin: 5px 0; /* Adjust spacing between icons */
-  }
-}
-
 @media (max-width: 768px) {
   .footer-content {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns for the second row */
+    grid-template-rows: auto 1fr; /* Two rows: first for "About Us", second for "Follow Us" and "Links" */
+    gap: 20px;
     padding: 0 10px;
   }
 
-  .footer-section {
-    margin: 10px 0;
+  .footer-section.about {
+    grid-column: 1 / -1; /* Span across both columns */
+    grid-row: 1 / 2;
+    text-align: center; /* Center the content */
   }
 
-  .footer-section h2 {
-    font-size: 16px;
-  }
-
-  .footer-section p,
-  .footer-section ul li {
-    font-size: 12px;
-  }
-
-  .about-row {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .links-follow-us-row {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    flex-wrap: wrap;
-  }
-
-  .footer-section.links,
   .footer-section.social {
-    flex: 1;
-    margin: 0 10px;
+    grid-column: 1 / 2; /* First column */
+    grid-row: 2 / 3;
+  }
+
+  .footer-section.links {
+    grid-column: 2 / 3; /* Second column */
+    grid-row: 2 / 3;
   }
 
   .social-icons {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
   }
 
   .social-icons a {
-    width: 50%; /* For two columns */
-    margin: 5px 0; /* Adjust spacing between icons */
+    margin: 5px;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
 @media (max-width: 576px) {
-  .footer-section {
-    margin: 5px 0;
+  .footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns for the second row */
+    grid-template-rows: auto 1fr; /* Two rows: first for "About Us", second for "Follow Us" and "Links" */
+    gap: 20px;
+    padding: 0 10px;
   }
 
-  .footer-section h2 {
-    font-size: 14px;
+  .footer-section.about {
+    grid-column: 1 / -1; /* Span across both columns */
+    grid-row: 1 / 2;
+    text-align: center; /* Center the content */
   }
 
-  .footer-section p,
-  .footer-section ul li {
-    font-size: 11px;
+  .footer-section.social {
+    grid-column: 1 / 2; /* First column */
+    grid-row: 2 / 3;
+  }
+
+  .footer-section.links {
+    grid-column: 2 / 3; /* Second column */
+    grid-row: 2 / 3;
+  }
+
+  .social-icons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .social-icons a {
+    margin: 5px;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .footer-bottom {
     font-size: 12px;
-  }
-
-  .links-follow-us-row {
-    flex-direction: row;
-    justify-content: space-between;
   }
 }

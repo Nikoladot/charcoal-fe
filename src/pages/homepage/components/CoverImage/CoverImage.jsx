@@ -7,6 +7,8 @@ import IntroductionSection from '../IntroductionSection/IntroductionSection'
 import './CoverImage.css'
 
 function CoverImage({ image }) {
+  console.log(window.devicePixelRatio);
+
   return (
     <div className="cover-image">
       <img className="cover-img" src={image} alt="Cover" />

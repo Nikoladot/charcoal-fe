@@ -121,9 +121,34 @@
   background: #fff;
 }
 
+/* Specific styles for mobile devices */
 @media screen and (max-width: 640px) {
   .nav-icon {
     left: 20px;
     top: 20px;
+    background: #fff; /* White background */
+  }
+
+  .nav-icon .hamburger-bar:before,
+  .nav-icon .hamburger-bar:after {
+    background: #000; /* Black lines */
+  }
+
+  .nav-icon.active {
+    background: #fff; /* White background when active */
+  }
+
+  .nav-icon.active .hamburger-bar:before,
+  .nav-icon.active .hamburger-bar:after {
+    background: #000; /* Black lines when active */
+  }
+
+  .nav-icon:hover {
+    background: #fff; /* Keep white background on hover */
+  }
+
+  .nav-icon:hover .hamburger-bar:before,
+  .nav-icon:hover .hamburger-bar:after {
+    background: #000; /* Keep black lines on hover */
   }
 }
