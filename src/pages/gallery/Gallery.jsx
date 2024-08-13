@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 
 import { albumOneImages } from '../../utils/imageImports'
 import './Gallery.css'
 import LightBox from './components/LightBox/LightBox'
 
 function Gallery() {
+  const { t } = useTranslation()
+
   const [showLightbox, setShowLightbox] = useState(false)
   const [currentIndex, setCurrentIndex] = useState(0)
   const [visibleImages, setVisibleImages] = useState(
@@ -24,7 +27,7 @@ function Gallery() {
           newState[index] = true
           return newState
         })
-      }, i * 500) // 500ms interval for each image
+      }, i * 500)
     })
 
     setTimeout(() => {
@@ -35,7 +38,7 @@ function Gallery() {
         })
         return newState
       })
-    }, staggeredIndexes.length * 500) // Show the remaining images after the initial staggered ones
+    }, staggeredIndexes.length * 500)
   }, [])
 
   const openLightbox = (index) => {
@@ -67,9 +70,9 @@ function Gallery() {
   return (
     <div className="gallery-page">
       <div className="gallery-header">
-        <h1 className="gallery-heading">Gallery Title</h1>
+        <h1 className="gallery-heading">{t('gallery_title')}</h1>
         <p className="gallery-description">
-          This is a short description or subtitle for your gallery.
+          {t('gallery_description')}
         </p>
       </div>
       <div className="gallery-container">

@@ -1,0 +1,39 @@
+{
+  "privacyPolicy": {
+    "title": "Datenschutzrichtlinie",
+    "sections": {
+      "introduction": {
+        "title": "1. Einführung",
+        "content": "Bei P.L.V DOO schätzen wir Ihre Privatsphäre. Diese Datenschutzrichtlinie erklärt, wie wir Ihre Daten verarbeiten, wenn Sie unsere Website besuchen."
+      },
+      "noPersonalData": {
+        "title": "2. Keine Erhebung personenbezogener Daten",
+        "content": "Wir erheben keine personenbezogenen Daten von Besuchern unserer Website. Personenbezogene Daten umfassen Informationen wie Ihren Namen, Ihre E-Mail-Adresse, Ihre Telefonnummer oder andere identifizierende Informationen."
+      },
+      "cookiesAndTracking": {
+        "title": "3. Cookies und Tracking",
+        "content": "Obwohl wir keine personenbezogenen Daten direkt erfassen, kann unsere Website Cookies und ähnliche Technologien verwenden, um die ordnungsgemäße Funktion der Website zu gewährleisten und Ihre Benutzererfahrung zu verbessern.\n\n- Funktionale Cookies: Diese Cookies sind für den Betrieb unserer Website unerlässlich. Sie verfolgen keine personenbezogenen Informationen.\n- Drittanbieter-Dienste: Wir können Drittanbieter-Dienste wie Analyse-Tools verwenden, die möglicherweise nicht-personenbezogene Daten wie Ihre IP-Adresse, Ihren Browsertyp und Ihr Betriebssystem erfassen. Diese Dienste helfen uns zu verstehen, wie unsere Website genutzt wird, und die Funktionalität zu verbessern."
+      },
+      "thirdPartyServices": {
+        "title": "4. Nutzung von Drittanbieter-Diensten",
+        "content": "Unsere Website kann auf Drittanbieter-Dienste für Hosting, Analysen oder die Bereitstellung von Inhalten zurückgreifen. Obwohl wir keine personenbezogenen Daten erfassen, können diese Drittanbieter Daten als Teil ihres Dienstes verarbeiten. Wir empfehlen Ihnen, die Datenschutzrichtlinien dieser Drittanbieter zu überprüfen:\n\n- Standorterkennung: https://www.i18next.com/"
+      },
+      "yourRights": {
+        "title": "5. Ihre Rechte und Wahlmöglichkeiten",
+        "content": "Da wir keine personenbezogenen Daten erfassen, gibt es keine Daten, auf die Sie zugreifen, die Sie ändern oder löschen können. Wenn Sie jedoch Bedenken oder Fragen zur Verwendung von Cookies oder Drittanbieter-Diensten haben, zögern Sie bitte nicht, uns zu kontaktieren."
+      },
+      "security": {
+        "title": "6. Sicherheit",
+        "content": "Wir sind bestrebt, die Sicherheit Ihrer Daten zu gewährleisten. Obwohl wir keine personenbezogenen Daten speichern, befolgen wir weiterhin bewährte Verfahren, um alle nicht-personenbezogenen Daten zu schützen, die möglicherweise über Cookies oder Drittanbieter-Dienste erfasst werden."
+      },
+      "policyUpdates": {
+        "title": "7. Aktualisierungen dieser Richtlinie",
+        "content": "Wir können diese Datenschutzrichtlinie von Zeit zu Zeit aktualisieren. Alle Änderungen werden auf dieser Seite angezeigt, daher empfehlen wir Ihnen, diese Richtlinie regelmäßig zu überprüfen."
+      },
+      "contactUs": {
+        "title": "8. Kontaktieren Sie uns",
+        "content": "Wenn Sie Fragen oder Bedenken zu dieser Datenschutzrichtlinie haben, kontaktieren Sie uns bitte unter:\n\nplv.com.doo@gmail.com"
+      }
+    }
+  }
+}

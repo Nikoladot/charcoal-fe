@@ -1,0 +1,39 @@
+{
+  "privacyPolicy": {
+    "title": "Politika e Privatësisë",
+    "sections": {
+      "introduction": {
+        "title": "1. Hyrje",
+        "content": "Në P.L.V DOO ne vlerësojmë privatësinë tuaj. Kjo politikë e privatësisë shpjegon se si ne trajtojmë të dhënat tuaja kur vizitoni faqen tonë të internetit."
+      },
+      "noPersonalData": {
+        "title": "2. Nuk Mbledhim të Dhëna Personale",
+        "content": "Ne nuk mbledhim të dhëna personale nga vizitorët e faqes sonë të internetit. Të dhënat personale përfshijnë informacione si emri juaj, adresa e email-it, numri i telefonit ose ndonjë informacion tjetër identifikues."
+      },
+      "cookiesAndTracking": {
+        "title": "3. Cookies dhe Gjurmimi",
+        "content": "Ndërsa nuk mbledhim drejtpërdrejt të dhëna personale, faqja jonë e internetit mund të përdorë cookies dhe teknologji të ngjashme për të siguruar funksionimin e duhur të faqes dhe për të përmirësuar përvojën tuaj të përdoruesit.\n\n- Cookies Funksionale: Këto cookies janë thelbësore për funksionimin e faqes sonë të internetit. Ato nuk ndjekin informacione personale.\n- Shërbimet e Palëve të Treta: Ne mund të përdorim shërbime të palëve të treta, si mjetet e analizave, të cilat mund të mbledhin të dhëna jo personale, si adresa juaj IP, lloji i shfletuesit dhe sistemi operativ. Këto shërbime na ndihmojnë të kuptojmë se si përdoret faqja jonë e internetit dhe si ta përmirësojmë funksionalitetin e saj."
+      },
+      "thirdPartyServices": {
+        "title": "4. Përdorimi i Shërbimeve të Palëve të Treta",
+        "content": "Faqja jonë e internetit mund të mbështetet në shërbime të palëve të treta për hosting, analiza ose dorëzimin e përmbajtjes. Ndërsa nuk mbledhim të dhëna personale, këta ofrues të shërbimeve mund të përpunojnë të dhëna si pjesë e shërbimit të tyre. Ne rekomandojmë që të rishikoni politikat e privatësisë së këtyre ofruesve të shërbimeve:\n\n- Zbulimi i vendndodhjes: https://www.i18next.com/"
+      },
+      "yourRights": {
+        "title": "5. Të Drejtat dhe Zgjedhjet Tuaja",
+        "content": "Meqenëse nuk mbledhim të dhëna personale, nuk ka të dhëna për t'u qasur, modifikuar ose fshirë. Megjithatë, nëse keni ndonjë shqetësim ose pyetje në lidhje me përdorimin e cookies ose shërbimeve të palëve të treta, ju lutemi mos hezitoni të na kontaktoni."
+      },
+      "security": {
+        "title": "6. Siguria",
+        "content": "Ne jemi të përkushtuar për të siguruar që informacionet tuaja të jenë të sigurta. Ndërsa nuk ruajmë të dhëna personale, ne ndjekim praktikat më të mira për të mbrojtur çdo informacion jo personal që mund të mblidhet përmes cookies ose shërbimeve të palëve të treta."
+      },
+      "policyUpdates": {
+        "title": "7. Përditësimet e Kësaj Politike",
+        "content": "Ne mund të përditësojmë këtë politikë të privatësisë herë pas here. Çdo ndryshim do të pasqyrohet në këtë faqe, kështu që ne ju inkurajojmë që ta rishikoni këtë politikë periodikisht."
+      },
+      "contactUs": {
+        "title": "8. Na Kontaktoni",
+        "content": "Nëse keni ndonjë pyetje ose shqetësim në lidhje me këtë politikë të privatësisë, ju lutemi na kontaktoni në:\n\nplv.com.doo@gmail.com"
+      }
+    }
+  }
+}

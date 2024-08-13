@@ -6,6 +6,7 @@ import Gallery from './pages/gallery/Gallery'
 import HomePage from './pages/homepage/HomePage'
 import Layout from './utils/Layout'
 import ScrollToTop from './utils/ScrollToTop'
+import './i18n'
 
 function App() {
   return (

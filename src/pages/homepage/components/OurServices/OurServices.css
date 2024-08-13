@@ -17,25 +17,32 @@
 
 .our-services-cards {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-around;
+  width: 100%;
 }
 
 .card {
   margin: 10px;
   padding: 10px;
   border-radius: 5px;
-  width: 40%;
+  width: 45%; /* Adjust width if needed */
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%; /* Ensures equal height for both cards */
+}
+
 .card-description {
   text-align: center;
   font-size: 22px;
-  margin-bottom: 10px; /* Add some space between the text and the image */
-  z-index: 2; /* Ensure it's above the image */
+  margin-bottom: 10px;
 }
 
 .card-image {
@@ -44,7 +51,7 @@
   height: auto;
   object-fit: cover;
   border-radius: 5px;
-  margin-top: 10px; /* Adjust spacing as needed */
+  flex-grow: 1; /* Ensures image fills available space */
 }
 
 /* Responsive Typography and Layout */
@@ -68,7 +75,9 @@
   }
 
   .card {
-    width: calc(100% - 55px); /* Adjust the card width to have space from the edges */
+    width: calc(
+      100% - 55px
+    ); /* Adjust the card width to have space from the edges */
   }
 
   .card-description {
@@ -82,7 +91,9 @@
     padding: 15px;
   }
   .card {
-    width: calc(100% - 55px); /* Adjust the card width to have space from the edges */
+    width: calc(
+      100% - 55px
+    ); /* Adjust the card width to have space from the edges */
   }
   .card-description {
     font-size: 16px;
@@ -95,7 +106,9 @@
     padding: 10px;
   }
   .card {
-    width: calc(100% - 55px); /* Adjust the card width to have space from the edges */
+    width: calc(
+      100% - 55px
+    ); /* Adjust the card width to have space from the edges */
   }
   .card-description {
     font-size: 16px;

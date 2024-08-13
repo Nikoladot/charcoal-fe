@@ -1,0 +1,49 @@
+.privacy-popup {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(83, 83, 83);
+  padding: 16px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  box-sizing: border-box;
+}
+
+.privacy-popup p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  align-items: center;
+}
+
+.privacy-popup .privacy-link {
+  color: #4a90e2;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.privacy-popup .privacy-link:hover {
+  color: #1e5ea8;
+}
+
+.privacy-popup .close-button-privacypopup {
+  padding: 8px 16px;
+  cursor: pointer;
+  background-color: #202020;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  /* Center align the button vertically */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* Make button take the full height */
+}
+
+.privacy-popup .close-button-privacypopup:hover {
+  background-color: #3295ff;
+}

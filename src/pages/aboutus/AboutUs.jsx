@@ -1,24 +1,22 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 
 import secondImage from '../../assets/albumone/image1.jpg'
-// replace with actual image path
 import firstImage from '../../assets/fire.jpg'
 import './AboutUs.css'
 
+
 function AboutUs() {
+  const { t } = useTranslation()
+
+
   return (
     <div className="about-us">
       <section className="section black-background">
         <div className="text-content txt-cntn-one">
-          <h1>About Us</h1>
+          <h1>{t('about_us_title')}</h1>
           <p>
-            YLorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et
-            metus non felis ullamcorper tincidunt. Vivamus euismod justo in nunc
-            aliquet, at hendrerit erat elementum. Proin cursus orci vitae erat
-            aliquam, id tincidunt nulla feugiat. Pellentesque habitant morbi
-            tristique senectus et netus et malesuada fames ac turpis egestas.
-            Suspendisse potenti. Sed feugiat sapien at libero facilisis, et
-            tristique ex fringilla.
+          {t('about_us_content')}
           </p>
         </div>
         <div className="image-container right-image">
@@ -31,15 +29,9 @@ function AboutUs() {
           <img src={secondImage} alt="Our Team" />
         </div>
         <div className="text-content txt-cntn-two">
-          <h1>Our Team</h1>
+          <h1>{t('our_team_title')}</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et
-            metus non felis ullamcorper tincidunt. Vivamus euismod justo in nunc
-            aliquet, at hendrerit erat elementum. Proin cursus orci vitae erat
-            aliquam, id tincidunt nulla feugiat. Pellentesque habitant morbi
-            tristique senectus et netus et malesuada fames ac turpis egestas.
-            Suspendisse potenti. Sed feugiat sapien at libero facilisis, et
-            tristique ex fringilla.
+          {t('our_team_content')}
           </p>
         </div>
       </section>

@@ -1,47 +1,98 @@
-/* Navigation Menu Styles */
 .navigation-menu {
   position: fixed;
+  top: 0;
+  left: -100%;
+  z-index: 25;
+  width: 20%;
+  height: 100%;
+  background: #0e0d0d;
+  transition: left 0.5s ease;
+  border-right: 2px solid #444;
+}
+
+.navigation-menu.menu-open {
+  left: 0;
+}
+
+.language-selector {
+  position: absolute;
   top: 10px;
   left: 10px;
-  z-index: 25;
+  width: 60%;
+  background: #333;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.language-label {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.flag-icon {
+  width: 20px;
+  height: 15px;
+  margin-left: 10px;
+}
+
+.language-dropdown {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  background: #222;
+  border: 1px solid #444;
+  border-radius: 5px;
+  z-index: 26;
+  overflow: hidden;
+}
+
+.dropdown-scroll {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.language-option {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.language-option:hover {
+  background: #444;
+}
+
+.language-option img {
+  margin-left: 10px;
 }
 
 .dropdown-menu {
-  border-radius: 10px;
-  background: linear-gradient(
-    rgba(27, 27, 27, 0.942) 85%,
-    rgba(37, 37, 37, 0.934) 90%,
-    rgba(41, 41, 41, 0.916) 100%
-  );
-  position: absolute;
-  width: auto;
-  animation: dropdownAnimation 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
-  top: 90px;
-  left: 10px;
-  text-wrap: nowrap;
   display: flex;
   flex-direction: column;
   gap: 22px;
-}
-
-@keyframes dropdownAnimation {
-  0% {
-    opacity: 0;
-    transform: translateY(0) scaleY(1);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) scaleY(1);
-  }
+  padding: 20px;
+  position: relative;
+  margin-top: 50px;
 }
 
 .menu-item {
   display: block;
-  padding: 15px 20px;
+  padding: 15px 40px;
   color: white;
   text-decoration: none;
   font-size: 23px;
+  letter-spacing: 1.5px;
+  word-spacing: 3px;
+  line-height: 1.8;
 }
 
 .menu-item:hover {
@@ -49,7 +100,6 @@
   border-radius: 5px;
 }
 
-/* Hamburger Icon Styles */
 .nav-icon {
   position: fixed;
   left: 40px;
@@ -57,15 +107,25 @@
   width: 50px;
   height: 50px;
   cursor: pointer;
-  z-index: 25;
+  z-index: 26;
   background: #fff;
   border-radius: 25px;
   transition:
     transform 1s ease-in-out,
-    background 0.25s ease-in-out; /* Separate transitions for different effects */
+    background 0.25s ease-in-out,
+    top 0.5s ease,
+    left 0.5s ease;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.navigation-menu.menu-open .nav-icon {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  left: auto;
+  z-index: 27;
 }
 
 .nav-icon:hover {
@@ -91,7 +151,7 @@
   background: #000;
   transition:
     transform 0.5s ease-in-out,
-    background 0.25s ease-in-out; /* Separate transitions for different effects */
+    background 0.25s ease-in-out;
 }
 
 .hamburger-bar:before {
@@ -121,34 +181,84 @@
   background: #fff;
 }
 
-/* Specific styles for mobile devices */
-@media screen and (max-width: 640px) {
+/* For screens around 13 to 14.5 inches */
+@media screen and (min-width: 1200px) and (max-width: 1600px) {
+  .navigation-menu {
+    width: 35%;
+  }
+}
+
+/* Media query targeting iPad Pro in portrait mode */
+@media screen and (min-width: 720px) and (max-width: 1100px) {
+  .navigation-menu {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 719px) {
+  .navigation-menu {
+    width: 60%;
+  }
+
+@media screen and (max-width: 530px) {
+  .navigation-menu {
+    width: 100%;
+    height: 60%;
+    border-bottom: 2px solid #444;
+  }
+
+  .navigation-menu.menu-open .nav-icon {
+    right: 5px;
+    top: 5px;
+  }
+
   .nav-icon {
     left: 20px;
     top: 20px;
-    background: #fff; /* White background */
+    background: #fff;
   }
 
   .nav-icon .hamburger-bar:before,
   .nav-icon .hamburger-bar:after {
-    background: #000; /* Black lines */
+    background: #000;
   }
 
   .nav-icon.active {
-    background: #fff; /* White background when active */
+    background: #fff;
   }
 
   .nav-icon.active .hamburger-bar:before,
   .nav-icon.active .hamburger-bar:after {
-    background: #000; /* Black lines when active */
+    background: #000;
   }
 
   .nav-icon:hover {
-    background: #fff; /* Keep white background on hover */
+    background: #fff;
   }
 
   .nav-icon:hover .hamburger-bar:before,
   .nav-icon:hover .hamburger-bar:after {
-    background: #000; /* Keep black lines on hover */
+    background: #000;
   }
+}
+
+.contact-info {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-info li {
+  margin-bottom: 20px;
+  line-height: 2;
+  word-spacing: 5px;
+  letter-spacing: 2px;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.contact-icon {
+  margin-right: 30px;
+  font-size: 24px;
 }

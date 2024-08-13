@@ -23,10 +23,15 @@
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@typescript-eslint/utils": "^7.16.1",
     "@vitejs/plugin-react": "^4.3.1",
+    "i18next": "^23.12.2",
+    "i18next-browser-languagedetector": "^8.0.0",
+    "or": "^0.2.0",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.11.2"
+    "react-i18next": "^15.0.0",
+    "react-router-dom": "^6.11.2",
+    "react-world-flags": "^1.6.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",

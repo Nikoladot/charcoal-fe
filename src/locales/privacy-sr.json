@@ -1,0 +1,39 @@
+{
+  "privacyPolicy": {
+    "title": "Politika Privatnosti",
+    "sections": {
+      "introduction": {
+        "title": "1. Uvod",
+        "content": "U P.L.V DOO cenimo vašu privatnost. Ova politika privatnosti objašnjava kako postupamo sa vašim podacima kada posetite našu web stranicu."
+      },
+      "noPersonalData": {
+        "title": "2. Ne Prikupljamo Lične Podatke",
+        "content": "Ne prikupljamo nikakve lične podatke od posetilaca naše web stranice. Lični podaci uključuju informacije poput vašeg imena, email adrese, broja telefona ili bilo koje druge identifikacione informacije."
+      },
+      "cookiesAndTracking": {
+        "title": "3. Kolačići i Praćenje",
+        "content": "Iako direktno ne prikupljamo lične podatke, naša web stranica može koristiti kolačiće i slične tehnologije kako bi obezbedila pravilno funkcionisanje sajta i poboljšala vaše korisničko iskustvo.\n\n- Funkcionalni Kolačići: Ovi kolačići su esencijalni za funkcionisanje naše web stranice. Ne prate lične informacije.\n- Usluge Treće Strane: Možemo koristiti usluge trećih strana, poput alata za analitiku, koji mogu prikupljati neosetljive podatke kao što su vaša IP adresa, tip pregledača i operativni sistem. Ove usluge nam pomažu da razumemo kako se naša web stranica koristi i kako da poboljšamo njenu funkcionalnost."
+      },
+      "thirdPartyServices": {
+        "title": "4. Korišćenje Usluga Treće Strane",
+        "content": "Naša web stranica može se oslanjati na usluge trećih strana za hosting, analitiku ili isporuku sadržaja. Iako ne prikupljamo lične podatke, ovi pružaoci usluga mogu obrađivati podatke kao deo svoje usluge. Preporučujemo da pregledate politike privatnosti ovih pružalaca usluga:\n\n- Detekcija Lokacije: https://www.i18next.com/"
+      },
+      "yourRights": {
+        "title": "5. Vaša Prava i Izbori",
+        "content": "Pošto ne prikupljamo lične podatke, nema podataka za pristup, izmene ili brisanje. Međutim, ako imate bilo kakve nedoumice ili pitanja u vezi sa korišćenjem kolačića ili usluga trećih strana, slobodno nas kontaktirajte."
+      },
+      "security": {
+        "title": "6. Sigurnost",
+        "content": "Posvećeni smo tome da vaši podaci budu sigurni. Iako ne čuvamo lične podatke, i dalje sledimo najbolje prakse kako bismo zaštitili bilo koje neosetljive podatke koji se mogu prikupljati putem kolačića ili usluga trećih strana."
+      },
+      "policyUpdates": {
+        "title": "7. Ažuriranja Ove Politike",
+        "content": "Ovu politiku privatnosti možemo ažurirati s vremena na vreme. Sve promene će biti prikazane na ovoj stranici, pa vas podstičemo da periodično pregledate ovu politiku."
+      },
+      "contactUs": {
+        "title": "8. Kontaktirajte Nas",
+        "content": "Ako imate bilo kakva pitanja ili nedoumice u vezi sa ovom politikom privatnosti, molimo vas da nas kontaktirate na:\n\nplv.com.doo@gmail.com"
+      }
+    }
+  }
+}

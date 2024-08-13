@@ -7,11 +7,11 @@
   align-items: center;
   height: 70vh; /* 70% of the viewport height */
   gap: 30px;
+  padding: 20px; /* Add padding for spacing */
 }
 
 .black-background {
   background-color: #1e1e1e;
-
   color: #fff;
 }
 
@@ -71,4 +71,132 @@
   transform: translateY(-50%);
   opacity: 1; /* Initially hidden */
   transition: opacity 0.3s ease-in-out;
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #444;
+  border-radius: 5px;
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: #008000;
+}
+
+form button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #008000;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+form button:hover {
+  background-color: #005f00;
+}
+
+/* Responsive Styles */
+@media (max-width: 1199px) {
+  .text-content {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+@media (max-width: 991px) {
+  .section {
+    height: auto;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .image-container {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .text-content {
+    padding: 10px;
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .txt-cntn-one,
+  .txt-cntn-two {
+    margin: 0;
+  }
+
+  .right-image,
+  .left-image {
+    margin: 20px 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .text-content {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .image-container {
+    width: 100%;
+    height: auto;
+  }
+
+  form {
+    padding: 0 20px; /* Add padding for form elements */
+  }
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding: 20px 10px;
+  }
+
+  .text-content {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .image-container {
+    width: 100%;
+    height: auto;
+  }
+
+  form {
+    padding: 0 10px; /* Add padding for form elements */
+  }
+}
+
+@media (max-width: 376px) {
+  .text-content {
+    font-size: 12px;
+    line-height: 20px;
+    word-spacing: 2px;
+  }
+
+  .image-container {
+    width: 100%;
+    height: auto;
+  }
+
+  form {
+    padding: 0 5px; /* Add padding for form elements */
+  }
 }

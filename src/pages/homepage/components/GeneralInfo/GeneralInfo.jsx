@@ -1,4 +1,5 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next';
 
 import imageThree from '../../../../assets/charcoalMaking.jpg'
 import imageOne from '../../../../assets/making_charcoal.png'
@@ -6,6 +7,8 @@ import imageTwo from '../../../../assets/rostilj.jpg'
 import './GeneralInfo.css'
 
 function GeneralInfo() {
+  const { t } = useTranslation();
+
   return (
     <div className="general-info-container">
       <div className="grid-container">
@@ -13,23 +16,15 @@ function GeneralInfo() {
           <img className="gi-img" src={imageOne} alt="Charcoal Origin" />
         </div>
         <div className="grid-item description first-description">
-          <h1>Proces proizvodnje ćumura</h1>
+          <h1>{t('making_process_title')}</h1>
           <p>
-            Početna faza proizvodnje ćumura, gde su drveni trupci pažljivo
-            složeni i pripremljeni za pirolizu. Drvo se sporo sagoreva u
-            uslovima sa malo kiseonika, što rezultira ćumurom sa visokim
-            sadržajem ugljenika. Ovaj proces osigurava efikasno sagorevanje sa
-            minimalnom količinom dima.
+            {t('making_process_content')}
           </p>
         </div>
         <div className="grid-item description second-description">
-          <h1>Kako i u kojim prilikama se koristi</h1>
+          <h1>{t('how_and_when_title')}</h1>
           <p>
-            Ćumur visokog kvaliteta i energetske vrednosti idealan je za
-            pripremu hrane na roštilju u svim prilikama. Obezbeđuje ravnomerno
-            sagorevanje i intenzivnu toplotu, što omogućava pravljenje roštilja
-            u punom intenzitetu. Takođe, zbog visoke kalorijske vrednosti može
-            se koristiti više puta, pružajući karakterističan ukus i aromu.
+            {t('how_and_when_content')}
           </p>
         </div>
         <div className="grid-item info-img second-img">
@@ -43,11 +38,9 @@ function GeneralInfo() {
           <img className="gi-img" src={imageThree} alt="Charcoal Packaging" />
         </div>
         <div className="grid-item description third-description">
-          <h1>Pakovanje</h1>
+          <h1>{t('package_title')}</h1>
           <p>
-            Proper packaging of charcoal ensures it remains dry and easy to
-            ignite. High-quality packaging also protects the charcoal from
-            breaking into smaller, less useful pieces.
+            {t('package_content')}
           </p>
         </div>
       </div>

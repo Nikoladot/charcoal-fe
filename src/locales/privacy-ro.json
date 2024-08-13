@@ -1,0 +1,39 @@
+{
+  "privacyPolicy": {
+    "title": "Politica de Confidențialitate",
+    "sections": {
+      "introduction": {
+        "title": "1. Introducere",
+        "content": "La P.L.V DOO, apreciem confidențialitatea dumneavoastră. Această politică de confidențialitate explică cum gestionăm datele dumneavoastră atunci când vizitați site-ul nostru."
+      },
+      "noPersonalData": {
+        "title": "2. Nu Colectăm Date Personale",
+        "content": "Nu colectăm niciun fel de date personale de la vizitatorii site-ului nostru. Datele personale includ informații precum numele dumneavoastră, adresa de email, numărul de telefon sau orice altă informație identificabilă."
+      },
+      "cookiesAndTracking": {
+        "title": "3. Cookies și Urmărire",
+        "content": "Deși nu colectăm direct date personale, site-ul nostru poate folosi cookies și tehnologii similare pentru a asigura funcționarea corectă a site-ului și pentru a îmbunătăți experiența utilizatorului.\n\n- Cookies Funcționale: Aceste cookies sunt esențiale pentru funcționarea site-ului nostru. Ele nu urmăresc informații personale.\n- Servicii ale Terților: Putem folosi servicii ale terților, cum ar fi instrumente de analiză, care pot colecta date nepersonale, cum ar fi adresa dumneavoastră IP, tipul de browser și sistemul de operare. Aceste servicii ne ajută să înțelegem cum este utilizat site-ul nostru și cum să îmbunătățim funcționalitatea acestuia."
+      },
+      "thirdPartyServices": {
+        "title": "4. Utilizarea Serviciilor Terților",
+        "content": "Site-ul nostru poate să se bazeze pe servicii ale terților pentru găzduire, analiză sau livrarea de conținut. Deși nu colectăm date personale, acești furnizori de servicii pot prelucra date ca parte a serviciului lor. Vă recomandăm să revizuiți politicile de confidențialitate ale acestor furnizori de servicii:\n\n- Detectarea locației: https://www.i18next.com/"
+      },
+      "yourRights": {
+        "title": "5. Drepturile și Alegerile Dumneavoastră",
+        "content": "Deoarece nu colectăm date personale, nu există date la care să solicitați acces, modificare sau ștergere. Totuși, dacă aveți orice fel de preocupări sau întrebări legate de utilizarea cookies-urilor sau a serviciilor terților, nu ezitați să ne contactați."
+      },
+      "security": {
+        "title": "6. Securitate",
+        "content": "Ne angajăm să ne asigurăm că informațiile dumneavoastră sunt în siguranță. Deși nu stocăm date personale, urmăm cele mai bune practici pentru a proteja orice date nepersonale care pot fi colectate prin cookies sau servicii ale terților."
+      },
+      "policyUpdates": {
+        "title": "7. Actualizări ale Acestei Politici",
+        "content": "Putem actualiza această politică de confidențialitate din când în când. Orice modificări vor fi reflectate pe această pagină, așa că vă încurajăm să revizuiți periodic această politică."
+      },
+      "contactUs": {
+        "title": "8. Contactați-ne",
+        "content": "Dacă aveți întrebări sau preocupări legate de această politică de confidențialitate, vă rugăm să ne contactați la:\n\nplv.com.doo@gmail.com"
+      }
+    }
+  }
+}

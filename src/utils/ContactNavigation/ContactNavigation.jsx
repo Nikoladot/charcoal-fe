@@ -26,14 +26,7 @@ function ContactNavigation() {
         <FontAwesomeIcon icon={faEnvelope} className="icon" size="xl" />
       </a>
       <a
-        href="https://www.facebook.com"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <FontAwesomeIcon icon={faFacebookF} className="icon" size="xl" />
-      </a>
-      <a
-        href="https://www.facebook.com"
+        href="+38166290993"
         target="_blank"
         rel="noopener noreferrer"
       >
