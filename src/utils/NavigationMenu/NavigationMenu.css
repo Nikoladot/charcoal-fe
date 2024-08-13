@@ -200,65 +200,66 @@
     width: 60%;
   }
 
-@media screen and (max-width: 530px) {
-  .navigation-menu {
-    width: 100%;
-    height: 60%;
-    border-bottom: 2px solid #444;
+  @media screen and (max-width: 530px) {
+    .navigation-menu {
+      width: 100%;
+      height: 100%;
+      border-bottom: 2px solid #444;
+    }
+
+    .navigation-menu.menu-open .nav-icon {
+      right: 5px;
+      top: 5px;
+    }
+
+    .nav-icon {
+      left: 20px;
+      top: 20px;
+      background: #fff;
+    }
+
+    .nav-icon .hamburger-bar:before,
+    .nav-icon .hamburger-bar:after {
+      background: #000;
+    }
+
+    .nav-icon.active {
+      background: #fff;
+    }
+
+    .nav-icon.active .hamburger-bar:before,
+    .nav-icon.active .hamburger-bar:after {
+      background: #000;
+    }
+
+    .nav-icon:hover {
+      background: #fff;
+    }
+
+    .nav-icon:hover .hamburger-bar:before,
+    .nav-icon:hover .hamburger-bar:after {
+      background: #000;
+    }
   }
 
-  .navigation-menu.menu-open .nav-icon {
-    right: 5px;
-    top: 5px;
+  .contact-info {
+    list-style: none;
+    padding: 0;
+    margin: 0;
   }
 
-  .nav-icon {
-    left: 20px;
-    top: 20px;
-    background: #fff;
+  .contact-info li {
+    margin-bottom: 20px;
+    line-height: 2;
+    word-spacing: 5px;
+    letter-spacing: 2px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
   }
 
-  .nav-icon .hamburger-bar:before,
-  .nav-icon .hamburger-bar:after {
-    background: #000;
+  .contact-icon {
+    margin-right: 30px;
+    font-size: 24px;
   }
-
-  .nav-icon.active {
-    background: #fff;
-  }
-
-  .nav-icon.active .hamburger-bar:before,
-  .nav-icon.active .hamburger-bar:after {
-    background: #000;
-  }
-
-  .nav-icon:hover {
-    background: #fff;
-  }
-
-  .nav-icon:hover .hamburger-bar:before,
-  .nav-icon:hover .hamburger-bar:after {
-    background: #000;
-  }
-}
-
-.contact-info {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.contact-info li {
-  margin-bottom: 20px;
-  line-height: 2;
-  word-spacing: 5px;
-  letter-spacing: 2px;
-  font-size: 24px;
-  display: flex;
-  align-items: center;
-}
-
-.contact-icon {
-  margin-right: 30px;
-  font-size: 24px;
 }
