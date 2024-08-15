@@ -46,6 +46,7 @@ function ContactForm() {
         name="user_name"
         className="form-input"
         required
+        placeholder="John"
       />
       <label className="form-label" htmlFor="user_email">
         Email
@@ -56,6 +57,7 @@ function ContactForm() {
         name="user_email"
         className="form-input"
         required
+        placeholder="johndoe@gmail.com"
       />
       <label className="form-label" htmlFor="message">
         Message
@@ -65,6 +67,8 @@ function ContactForm() {
         name="message"
         className="form-textarea"
         required
+        rows="6"
+        placeholder={`Hello,\n\nI have an offer...\n\nRegards,\nJohn`}
       />
       <input
         type="submit"

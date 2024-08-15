@@ -31,9 +31,7 @@ function Footer({ openPrivacyModal }) {
           <div className="footer-section social">
             <h2>{t('follow_us_title')}</h2>
             <div className="social-icons">
-              <a href="https://facebook.com">
-                <FontAwesomeIcon icon={faFacebookF} />
-              </a>
+
               <a href="https://instagram.com">
                 <FontAwesomeIcon icon={faInstagram} />
               </a>

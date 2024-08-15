@@ -60,12 +60,16 @@ function NavigationMenu() {
   }, []);
 
   useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add('menu-open');
+    } else {
+      document.body.classList.remove('menu-open');
+    }
+  }, [isOpen]);
+
+  useEffect(() => {
     setIsOpen(false);
   }, [location]);
-
-  // Debugging logs
-  console.log('Current language:', i18n.language);
-  console.log('Selected language object:', languages.find((l) => l.code === i18n.language.split('-')[0]));
 
   return (
     <div ref={menuRef} className={`navigation-menu ${isOpen ? 'menu-open' : ''}`}>

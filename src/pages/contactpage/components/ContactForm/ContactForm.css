@@ -24,7 +24,7 @@
 }
 
 .form-textarea {
-  height: 100px; /* Default height */
+  height: 120px; /* Default height */
   resize: vertical; /* Allow vertical resizing */
 }
 
@@ -53,4 +53,12 @@
   border-color: #16c21e; /* Change border color on focus */
   outline: none; /* Remove the default outline */
   box-shadow: 0 0 9px rgba(255, 255, 255, 0.5); /* Optional: Add a subtle shadow */
+}
+
+@media screen and (max-width: 530px) {
+  .form-container {
+    position: relative;
+    width: 79%;
+    top: -70px;
+  }
 }
