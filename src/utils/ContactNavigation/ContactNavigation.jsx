@@ -30,14 +30,23 @@ function ContactNavigation() {
 
   useEffect(() => {
     if (popupContent && copyAction) {
-      navigator.clipboard.writeText(popupContent.text).then(() => {
-        setCopied(true)
-        setTimeout(() => {
+      const handleCopy = async () => {
+        try {
+          await navigator.clipboard.writeText(popupContent.text)
+          setCopied(true)
+          setTimeout(() => {
+            setShowPopup(false)
+            setCopied(false)
+            setCopyAction(false)
+          }, 2000)
+        } catch (error) {
+          console.error('Copy failed', error)
           setShowPopup(false)
-          setCopied(false)
           setCopyAction(false)
-        }, 2000) // 2-second delay before closing
-      })
+        }
+      }
+
+      handleCopy()
     }
   }, [popupContent, copyAction])
 
