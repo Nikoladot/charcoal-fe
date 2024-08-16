@@ -38,7 +38,7 @@ function ContactNavigation() {
           setCopied(false)
           setShowPopup(false) // Closing after the delay
           setCopyAction(false)
-        }, 2000) // 2-second delay before closing
+        }, 1000) // 2-second delay before closing
       })
 
       // Prevent the popup from closing instantly
