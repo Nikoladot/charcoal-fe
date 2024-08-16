@@ -33,17 +33,20 @@ function ContactNavigation() {
       navigator.clipboard.writeText(popupContent.text).then(() => {
         setCopied(true)
         
-        // Force reflow to ensure the copied state is visible
-        document.querySelector('.popup').offsetHeight
-        
+        // Ensure re-render before closing
         setTimeout(() => {
-          setShowPopup(false)
           setCopied(false)
+          setShowPopup(false) // Closing after the delay
           setCopyAction(false)
         }, 2000) // 2-second delay before closing
       })
+
+      // Prevent the popup from closing instantly
+      if (showPopup) {
+        setShowPopup(true) // This ensures the state remains true until the timeout is complete
+      }
     }
-  }, [popupContent, copyAction])
+  }, [popupContent, copyAction, showPopup])
 
   const handleIconClick = (type) => {
     const content =
