@@ -65,6 +65,11 @@
   transform: scale(1);
 }
 
+.popup.closing {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
 .popup p {
   font-weight: 600;
   font-size: 18px;
