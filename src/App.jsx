@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, Routes } from 'react-router-dom'
+import { Route, Router, Routes } from 'react-router-dom'
 import AboutUs from './pages/aboutus/AboutUs'
 import ContactPage from './pages/contactpage/ContactPage'
 import Gallery from './pages/gallery/Gallery'
@@ -7,10 +7,13 @@ import HomePage from './pages/homepage/HomePage'
 import Layout from './utils/Layout'
 import ScrollToTop from './utils/ScrollToTop'
 import './i18n'
+import NavigationMenu from './utils/NavigationMenu/NavigationMenu'
+import ContactNavigation from './utils/ContactNavigation/ContactNavigation'
 
 function App() {
   return (
     <>
+      <ContactNavigation />
       <ScrollToTop />
       <Layout>
         <Routes>
@@ -21,7 +24,7 @@ function App() {
         </Routes>
       </Layout>
     </>
-  )
+  ) 
 }
 
 export default App
