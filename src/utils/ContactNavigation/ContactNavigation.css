@@ -103,6 +103,12 @@
 
 /* Media queries for mobile responsiveness */
 @media (max-width: 600px) {
+  .social-media-icons {
+    top: 10px; /* Position it closer to the top */
+    right: 10px; /* Position it closer to the right */
+    transform: none; /* Remove the translateY to place it at the top */
+  }
+
   .popup {
     padding: 15px;
     min-width: 65%;

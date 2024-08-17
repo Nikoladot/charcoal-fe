@@ -20,6 +20,7 @@ function Layout({ children }) {
   return (
     <div className="layout">
       <main className="main-content">{children}</main>
+      <ContactNavigation />
       <NavigationMenu />
       <Footer openPrivacyModal={openPrivacyModal} />
       <PrivacyPolicyPopup />
