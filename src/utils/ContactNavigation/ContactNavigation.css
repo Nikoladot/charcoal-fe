@@ -1,7 +1,7 @@
 .social-media-icons {
   position: fixed;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-50%) translateZ(0);
   right: 20px;
   display: flex;
   flex-direction: column;
@@ -13,6 +13,7 @@
   width: 20px;
   height: 160px;
   z-index: 999;
+  will-change: transform;
 }
 
 .icon {
@@ -51,6 +52,7 @@
   width: auto;
   text-align: center;
   border-radius: 10px;
+  will-change: transform, opacity;
 
   /* Animation properties */
   opacity: 0;
@@ -99,6 +101,12 @@
 .popup.copied .faCheckCircle {
   font-size: 24px;
   margin: 10px 0;
+}
+
+@media (hover: none) {
+  .icon:hover {
+    transform: none; /* Disable hover effect on touch devices */
+  }
 }
 
 /* Media queries for mobile responsiveness */
