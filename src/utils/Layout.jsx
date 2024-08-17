@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import Footer from '../footer/Footer'
-import ContactNavigation from '../utils/ContactNavigation/ContactNavigation'
 import NavigationMenu from '../utils/NavigationMenu/NavigationMenu'
 import PrivacyPolicyPopup from './PrivacyAndPolicy/PrivacyPolicyPopup'
 import PrivacyPolicyModal from './PrivacyAndPolicy/PrivacyPolicyModal/PrivacyPolicyModal'
@@ -20,7 +19,6 @@ function Layout({ children }) {
   return (
     <div className="layout">
       <main className="main-content">{children}</main>
-      <ContactNavigation />
       <NavigationMenu />
       <Footer openPrivacyModal={openPrivacyModal} />
       <PrivacyPolicyPopup />

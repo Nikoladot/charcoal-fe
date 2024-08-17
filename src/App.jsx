@@ -7,7 +7,6 @@ import HomePage from './pages/homepage/HomePage'
 import Layout from './utils/Layout'
 import ScrollToTop from './utils/ScrollToTop'
 import './i18n'
-import NavigationMenu from './utils/NavigationMenu/NavigationMenu'
 import ContactNavigation from './utils/ContactNavigation/ContactNavigation'
 
 function App() {
