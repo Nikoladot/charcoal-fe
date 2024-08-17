@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import Footer from '../footer/Footer'
 import ContactNavigation from '../utils/ContactNavigation/ContactNavigation'
@@ -16,6 +16,20 @@ function Layout({ children }) {
   const closePrivacyModal = () => {
     setIsModalOpen(false)
   }
+
+  useEffect(() => {
+    const setViewportHeight = () => {
+      let vh = window.innerHeight * 0.01
+      document.documentElement.style.setProperty('--vh', `${vh}px`)
+    }
+
+    window.addEventListener('resize', setViewportHeight)
+    setViewportHeight()
+
+    return () => {
+      window.removeEventListener('resize', setViewportHeight)
+    }
+  }, [])
 
   return (
     <div className="layout">

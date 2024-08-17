@@ -1,6 +1,7 @@
 .social-media-icons {
   position: fixed;
-  top: 50%;
+  /* Use calc with var(--vh) for dynamic height adjustment */
+  top: calc(50 * var(--vh));
   transform: translateY(-50%);
   right: 20px;
   display: flex;
