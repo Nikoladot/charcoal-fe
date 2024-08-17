@@ -1,10 +1,7 @@
 .layout {
   display: flex;
   flex-direction: column;
-  /* Fallback for browsers that don't support dvh */
-  min-height: 100vh;
-  /* Use dynamic viewport height for better handling on mobile */
-  min-height: 100dvh;
+  height: 100dvh;
 }
 
 .main-content {
