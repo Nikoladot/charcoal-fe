@@ -31,24 +31,25 @@ function ContactNavigation() {
   useEffect(() => {
     if (popupContent && copyAction) {
       navigator.clipboard.writeText(popupContent.text).then(() => {
-        setCopied(true);
-        
-        // Use requestAnimationFrame to handle UI updates
-        requestAnimationFrame(() => {
+        setTimeout(() => {
+          setCopied(true)
+
+          // Force reflow to ensure the copied state is visible
+          document.querySelector('.popup').offsetHeight
+
           setTimeout(() => {
-            document.querySelector('.popup').classList.add('closing');
-          }, 2000);
-  
+            document.querySelector('.popup').classList.add('closing') // Start the closing transition
+          }, 2000)
+
           setTimeout(() => {
-            setShowPopup(false);
-            setCopied(false);
-            setCopyAction(false);
-          }, 2300);
-        });
-      });
+            setShowPopup(false)
+            setCopied(false)
+            setCopyAction(false)
+          }, 2300) // Match this with the CSS transition duration
+        }, 100) // Small delay before setting copied to ensure rendering
+      })
     }
-  }, [popupContent, copyAction]);
-  
+  }, [popupContent, copyAction])
 
   const handleIconClick = (type) => {
     const content =
