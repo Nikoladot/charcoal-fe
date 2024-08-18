@@ -27,7 +27,7 @@ function Footer({ openPrivacyModal }) {
           </div>
 
           <div className="footer-section social">
-            <h2>{t('follow_us_title')}</h2>
+            <h2>{t('contact_us_title')}</h2>
             <div className="social-items">
               <div className="social-item">
                 <FontAwesomeIcon icon={faEnvelope} />

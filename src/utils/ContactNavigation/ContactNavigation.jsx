@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
 import {
   faInstagram,
   faViber,
@@ -12,6 +13,7 @@ import { useNavigate } from 'react-router-dom'
 import './ContactNavigation.css'
 
 function ContactNavigation() {
+  const { t } = useTranslation() // Import useTranslation hook
   const [showPopup, setShowPopup] = useState(false)
   const [popupContent, setPopupContent] = useState(null)
   const [copyAction, setCopyAction] = useState(false)
@@ -56,36 +58,45 @@ function ContactNavigation() {
 
   const handleIconClick = (type) => {
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
-    const content =
-      type === 'email'
-        ? {
-            text: 'prodajacumura.plv@gmail.com',
-            type: 'email',
-            options: [
-              { label: 'Go to Contact Form', action: handleRedirectToContactForm },
-              { label: 'Open Email App', action: handleOpenEmailApp },
-              { label: 'Copy Email', action: () => setCopyAction(true) },
-            ],
-          }
-        : {
-            text: '+381 61 6704 501',
-            type: 'phone',
-            options: [
-              { label: 'Copy Number', action: () => setCopyAction(true) },
-              isMobile && { label: 'Call Now', action: () => window.location.href = `tel:+381616704501` },
-            ].filter(Boolean), // filter(Boolean) removes any false values in case the user is not on mobile
-          }
-  
+    let content;
+
+    if (type === 'email') {
+      content = {
+        text: 'prodajacumura.plv@gmail.com',
+        type: 'email',
+        options: [
+          { label: t('go_to_contact_form'), action: handleRedirectToContactForm },
+          { label: t('open_email_app'), action: handleOpenEmailApp },
+          { label: t('copy_email'), action: () => setCopyAction(true) },
+        ],
+      }
+    } else if (type === 'phone') {
+      content = {
+        text: '+381 61 6704 501',
+        type: 'phone',
+        options: [
+          { label: t('copy_number'), action: () => setCopyAction(true) },
+          isMobile && { label: t('call_now'), action: () => window.location.href = `tel:+381616704501` },
+        ].filter(Boolean), // filter(Boolean) removes any false values in case the user is not on mobile
+      }
+    } else if (type === 'whatsapp' || type === 'viber') {
+      content = {
+        text: '+381 61 6704 501',
+        type: 'phone',
+        options: [
+          { label: t('copy_number'), action: () => setCopyAction(true) },
+        ],
+      }
+    }
+
     setPopupContent(content)
     setShowPopup(true)
   }
-  
 
   const handleRedirectToContactForm = () => {
-    setShowPopup(false);
+    setShowPopup(false)
     navigate('/contact#contact-form')
   }
-
 
   const handleOpenEmailApp = () => {
     setShowPopup(false)
@@ -108,10 +119,10 @@ function ContactNavigation() {
         <span onClick={() => handleIconClick('phone')}>
           <FontAwesomeIcon icon={faPhone} className="icon" size="xl" />
         </span>
-        <span onClick={() => handleIconClick('phone')}>
+        <span onClick={() => handleIconClick('whatsapp')}>
           <FontAwesomeIcon icon={faWhatsapp} className="icon" size="xl" />
         </span>
-        <span onClick={() => handleIconClick('phone')}>
+        <span onClick={() => handleIconClick('viber')}>
           <FontAwesomeIcon icon={faViber} className="icon" size="xl" />
         </span>
       </div>
@@ -122,7 +133,7 @@ function ContactNavigation() {
             {copied ? (
               <>
                 <FontAwesomeIcon icon={faCheckCircle} size="2x" />
-                <p>Copied</p>
+                <p>{t('copied')}</p>
               </>
             ) : (
               <>
@@ -134,7 +145,7 @@ function ContactNavigation() {
                 ))}
               </>
             )}
-            {!copied && <button onClick={handleClosePopup}>Close</button>}
+            {!copied && <button onClick={handleClosePopup}>{t('close')}</button>}
           </div>
         </div>
       )}

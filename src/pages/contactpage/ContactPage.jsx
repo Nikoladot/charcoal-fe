@@ -36,10 +36,9 @@ function ContactPage() {
     navigator.clipboard.writeText(text)
     const rect = event.currentTarget.getBoundingClientRect()
     setTooltipPosition({ top: rect.bottom + window.scrollY + 5, left: rect.left + window.scrollX })
-    setTooltip(type === 'phone' ? 'Number copied!' : 'Email copied!')
+    setTooltip(type === 'phone' ? t('contact_tooltip_number_copied') : t('contact_tooltip_mail_copied'))
     setClickedCard(type) // Store the clicked card type
     setShowHoverTooltip(false) // Hide the hover tooltip
-
 
     setTimeout(() => {
       setTooltip(null)
@@ -59,6 +58,7 @@ function ContactPage() {
       console.error('Error opening Instagram:', error)
     }
   }
+
   return (
     <div className="contact-page">
       {tooltip && <div className="tooltip" style={{ top: tooltipPosition.top, left: tooltipPosition.left }}>{tooltip}</div>}
@@ -87,7 +87,7 @@ function ContactPage() {
             </div>
             <h2>Contact</h2>
             <p>+381 61 6704 501</p>
-            {showHoverTooltip && <div className="tooltip-hover">Click here to copy +381 61 6704 501</div>}
+            {showHoverTooltip && <div className="tooltip-hover">{t('contact_hover_copy_number')}</div>}
           </div>
           <div
             className={`contact-card ${clickedCard === 'email' ? 'submitted' : ''}`}
@@ -96,7 +96,7 @@ function ContactPage() {
             <FontAwesomeIcon icon={clickedCard === 'email' ? faCheckCircle : faEnvelope} className="contact-card-icon" />
             <h2>Email</h2>
             <p>prodajacumura.plv@gmail.com</p>
-            {showHoverTooltip && <div className="tooltip-hover">Click here to copy prodajacumura.plv@gmail.com</div>}
+            {showHoverTooltip && <div className="tooltip-hover">{t('contact_hover_copy_mail')}</div>}
           </div>
           <div
             className={`contact-card ${clickedCard === 'instagram' ? 'submitted' : ''}`}
@@ -104,7 +104,7 @@ function ContactPage() {
           >
             <FontAwesomeIcon icon={clickedCard === 'instagram' ? faCheckCircle : faInstagram} className="contact-card-icon" />
             <h2>Instagram</h2>
-            {showHoverTooltip && <div className="tooltip-hover">Click here to visit our Instagram profile</div>}
+            {showHoverTooltip && <div className="tooltip-hover">{t('contact_hover_click_instagram')}</div>}
           </div>
         </div>
       </div>
