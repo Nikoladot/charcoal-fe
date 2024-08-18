@@ -83,7 +83,7 @@ function ContactNavigation() {
 
   const handleRedirectToContactForm = () => {
     setShowPopup(false);
-    window.location.href = `${window.location.origin}/#/contact#contact-form`;
+    navigate('/contact#contact-form')
   }
 
 
