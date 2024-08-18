@@ -118,14 +118,15 @@
 
 @media (max-width: 576px) {
   .social-item {
-    margin-bottom: 10px;
+    font-size: 14px; /* Smaller font size for small screens */
+    margin-bottom: 8px; /* Adjust the margin for smaller screens */
   }
 
   .footer-content {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Two columns for "Follow Us" and "Links" */
+    grid-template-columns: 1fr; /* Single column layout */
     grid-template-rows: auto; /* Single row */
-    gap: 20px;
+    gap: 15px;
     padding: 0 10px;
   }
 
@@ -133,37 +134,30 @@
     grid-column: 1 / -1; /* Span across both columns */
     grid-row: 1 / 2;
     text-align: center; /* Center the content */
+    margin-bottom: 15px;
   }
 
-  .footer-section.social {
-    grid-column: 1 / 2; /* First column */
-    grid-row: 2 / 3;
-    text-align: center;
-  }
-
+  .footer-section.social,
   .footer-section.links {
-    grid-column: 2 / 3; /* Second column */
-    grid-row: 2 / 3;
+    grid-column: 1 / -1; /* Make each section span the entire width */
+    grid-row: auto;
     text-align: center;
-  }
-
-  .social-icons {
-    display: block; /* Ensure each item in Follow Us has its own line */
-    text-align: left; /* Align text to the left */
-  }
-
-  .social-icons a,
-  .social-icons p {
-    display: flex;
-    align-items: center;
-    font-size: 16px; /* Adjust font size for mobile */
     margin-bottom: 10px;
   }
 
-  .social-icons a .fa-envelope,
-  .social-icons a .fa-phone,
-  .social-icons a .fa-instagram {
-    margin-right: 10px;
+  .footer-section.social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-section.links {
+    margin-bottom: 15px;
+  }
+
+  .social-item {
+    justify-content: flex-start;
+    gap: 8px;
   }
 
   .footer-bottom {
