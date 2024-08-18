@@ -1,13 +1,11 @@
 import React from 'react'
 import {
-  faFacebookF,
   faInstagram,
   faViber,
   faWhatsapp,
 } from '@fortawesome/free-brands-svg-icons'
 import { useTranslation } from 'react-i18next'
-import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
-import { faPhone } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './Footer.css'
 
@@ -15,8 +13,8 @@ function Footer({ openPrivacyModal }) {
   const { t } = useTranslation()
 
   const handlePrivacyClick = (e) => {
-    e.preventDefault() // Prevents the default link behavior
-    openPrivacyModal() // Opens the privacy policy modal
+    e.preventDefault()
+    openPrivacyModal()
   }
 
   return (
@@ -30,23 +28,21 @@ function Footer({ openPrivacyModal }) {
 
           <div className="footer-section social">
             <h2>{t('follow_us_title')}</h2>
-            <div className="social-icons">
-
-              <a href="https://instagram.com">
-                <FontAwesomeIcon icon={faInstagram} />
-              </a>
-              <a href="viber://contact?number=+123456789">
-                <FontAwesomeIcon icon={faViber} />
-              </a>
-              <a href="https://wa.me/123456789">
-                <FontAwesomeIcon icon={faWhatsapp} />
-              </a>
-              <a href="mailto:info@company.com">
+            <div className="social-items">
+              <div className="social-item">
                 <FontAwesomeIcon icon={faEnvelope} />
-              </a>
-              <a href="tel:+123456789">
+                <span>prodajacumura.plv@gmail.com</span>
+              </div>
+              <div className="social-item">
                 <FontAwesomeIcon icon={faPhone} />
-              </a>
+                <span>+381 61 6704 501</span>
+              </div>
+              <div className="social-item">
+                <FontAwesomeIcon icon={faInstagram} />
+                <a href="https://www.instagram.com/charcoal_serbia.export/" target="_blank" rel="noopener noreferrer">
+                  click here to view instgaram
+                </a>
+              </div>
             </div>
           </div>
 

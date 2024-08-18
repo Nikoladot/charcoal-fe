@@ -7,6 +7,8 @@ import {
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 import { faPhone, faCheckCircle } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { useNavigate } from 'react-router-dom'
+
 import './ContactNavigation.css'
 
 function ContactNavigation() {
@@ -14,6 +16,7 @@ function ContactNavigation() {
   const [popupContent, setPopupContent] = useState(null)
   const [copyAction, setCopyAction] = useState(false)
   const [copied, setCopied] = useState(false)
+  const navigate = useNavigate()
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -52,6 +55,7 @@ function ContactNavigation() {
   }, [popupContent, copyAction])
 
   const handleIconClick = (type) => {
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
     const content =
       type === 'email'
         ? {
@@ -66,17 +70,22 @@ function ContactNavigation() {
         : {
             text: '+381 61 6704 501',
             type: 'phone',
-            options: [{ label: 'Copy Number', action: () => setCopyAction(true) }],
+            options: [
+              { label: 'Copy Number', action: () => setCopyAction(true) },
+              isMobile && { label: 'Call Now', action: () => window.location.href = `tel:+381616704501` },
+            ].filter(Boolean), // filter(Boolean) removes any false values in case the user is not on mobile
           }
-
+  
     setPopupContent(content)
     setShowPopup(true)
   }
+  
 
   const handleRedirectToContactForm = () => {
-    setShowPopup(false)
-    window.location.href = `${window.location.origin}/#/contact#contact-form`
+    setShowPopup(false);
+    window.location.href = `${window.location.origin}/#/contact#contact-form`;
   }
+
 
   const handleOpenEmailApp = () => {
     setShowPopup(false)

@@ -35,6 +35,7 @@
   justify-content: space-between;
   padding: 0 50px;
   text-align: center;
+  margin-bottom: 5px;
 }
 
 .footer-section {
@@ -42,8 +43,8 @@
   margin: 0 10px;
 }
 
-.footer-section h2 {
-  margin-bottom: 10px;
+.about {
+  padding-top: 40px;
 }
 
 .footer-section p,
@@ -69,28 +70,28 @@
   text-decoration: underline;
 }
 
-.footer-section h2,
-.footer-section p,
-.footer-section ul {
-  margin-top: 20px; /* Adjust this value to ensure consistent spacing */
-}
-
-.social-icons {
+/* Social items styling */
+.social-items {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.social-item {
+  display: flex;
+  align-items: center;
   justify-content: center;
+  gap: 10px;
+  font-size: 18px;
 }
 
-.social-icons a {
+.social-item a {
   color: #fff;
-  margin: 5px 10px;
-  font-size: 24px;
-  display: inline-block;
-  transition: color 0.3s;
+  text-decoration: none;
 }
 
-.social-icons a:hover {
-  color: #ccc;
+.social-item a:hover {
+  text-decoration: underline;
 }
 
 .footer-bottom {
@@ -99,51 +100,31 @@
   border-top: 1px solid #444;
 }
 
+/* Mobile adjustments */
 @media (max-width: 768px) {
   .footer-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Two columns for the second row */
-    grid-template-rows: auto 1fr; /* Two rows: first for "About Us", second for "Follow Us" and "Links" */
-    gap: 20px;
-    padding: 0 10px;
+    flex-direction: column;
+    padding: 0 20px;
   }
 
-  .footer-section.about {
-    grid-column: 1 / -1; /* Span across both columns */
-    grid-row: 1 / 2;
-    text-align: center; /* Center the content */
-  }
-
-  .footer-section.social {
-    grid-column: 1 / 2; /* First column */
-    grid-row: 2 / 3;
-  }
-
-  .footer-section.links {
-    grid-column: 2 / 3; /* Second column */
-    grid-row: 2 / 3;
-  }
-
-  .social-icons {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-  }
-
-  .social-icons a {
-    margin: 5px;
-    font-size: 24px;
-    display: flex;
-    justify-content: center;
+  .social-items {
     align-items: center;
+  }
+
+  .social-item {
+    font-size: 16px;
   }
 }
 
 @media (max-width: 576px) {
+  .social-item {
+    margin-bottom: 10px;
+  }
+
   .footer-content {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Two columns for the second row */
-    grid-template-rows: auto 1fr; /* Two rows: first for "About Us", second for "Follow Us" and "Links" */
+    grid-template-columns: 1fr 1fr; /* Two columns for "Follow Us" and "Links" */
+    grid-template-rows: auto; /* Single row */
     gap: 20px;
     padding: 0 10px;
   }
@@ -157,28 +138,36 @@
   .footer-section.social {
     grid-column: 1 / 2; /* First column */
     grid-row: 2 / 3;
+    text-align: center;
   }
 
   .footer-section.links {
     grid-column: 2 / 3; /* Second column */
     grid-row: 2 / 3;
+    text-align: center;
   }
 
   .social-icons {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+    display: block; /* Ensure each item in Follow Us has its own line */
+    text-align: left; /* Align text to the left */
   }
 
-  .social-icons a {
-    margin: 5px;
-    font-size: 24px;
+  .social-icons a,
+  .social-icons p {
     display: flex;
-    justify-content: center;
     align-items: center;
+    font-size: 16px; /* Adjust font size for mobile */
+    margin-bottom: 10px;
+  }
+
+  .social-icons a .fa-envelope,
+  .social-icons a .fa-phone,
+  .social-icons a .fa-instagram {
+    margin-right: 10px;
   }
 
   .footer-bottom {
     font-size: 12px;
+    text-align: center;
   }
 }

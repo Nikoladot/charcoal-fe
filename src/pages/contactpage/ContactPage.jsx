@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import {
   faInstagram,
@@ -9,6 +9,7 @@ import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 import { faPhone } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons'
+import { useLocation } from 'react-router-dom';
 
 import './ContactPage.css'
 import ContactForm from './components/ContactForm/ContactForm'
@@ -19,6 +20,17 @@ function ContactPage() {
   const [tooltipPosition, setTooltipPosition] = useState({})
   const [clickedCard, setClickedCard] = useState(null)
   const [showHoverTooltip, setShowHoverTooltip] = useState(true)
+  const location = useLocation();
+
+  useEffect(() => {
+    const hash = location.hash;
+    if (hash) {
+      const element = document.querySelector(hash);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location]);
 
   const handleCopy = (text, type, event) => {
     navigator.clipboard.writeText(text)
@@ -27,6 +39,7 @@ function ContactPage() {
     setTooltip(type === 'phone' ? 'Number copied!' : 'Email copied!')
     setClickedCard(type) // Store the clicked card type
     setShowHoverTooltip(false) // Hide the hover tooltip
+
 
     setTimeout(() => {
       setTooltip(null)
