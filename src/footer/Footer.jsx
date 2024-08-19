@@ -40,7 +40,8 @@ function Footer({ openPrivacyModal }) {
               <div className="social-item">
                 <FontAwesomeIcon icon={faInstagram} />
                 <a href="https://www.instagram.com/charcoal_serbia.export/" target="_blank" rel="noopener noreferrer">
-                  click here to view instgaram
+                  {t('click_here_to_view_instagram')}
+                  <span className="tooltip">{t('click_here_to_view_instagram')}</span>
                 </a>
               </div>
             </div>

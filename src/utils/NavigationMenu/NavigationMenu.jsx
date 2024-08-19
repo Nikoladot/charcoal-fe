@@ -1,17 +1,17 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
-import Flag from 'react-world-flags';
+import React, { useEffect, useRef, useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
+import Flag from 'react-world-flags'
 
-import './NavigationMenu.css';
+import './NavigationMenu.css'
 
 function NavigationMenu() {
-  const { i18n } = useTranslation();
-  const [isOpen, setIsOpen] = useState(false);
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const menuRef = useRef(null);
-  const dropdownRef = useRef(null);
-  const location = useLocation();
+  const { i18n } = useTranslation()
+  const [isOpen, setIsOpen] = useState(false)
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false)
+  const menuRef = useRef(null)
+  const dropdownRef = useRef(null)
+  const location = useLocation()
 
   const languages = [
     { code: 'en', name: 'English', flag: 'GB' },
@@ -21,15 +21,15 @@ function NavigationMenu() {
     { code: 'sq', name: 'Albanian', flag: 'AL' },
     { code: 'ro', name: 'Română', flag: 'RO' },
     { code: 'de', name: 'Deutsch', flag: 'DE' }
-  ];
+  ]
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+    setIsOpen(!isOpen)
+  }
 
   const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
-  };
+    setIsDropdownOpen(!isDropdownOpen)
+  }
 
   const handleClickOutside = (event) => {
     if (
@@ -37,44 +37,44 @@ function NavigationMenu() {
       !menuRef.current.contains(event.target) &&
       !dropdownRef.current?.contains(event.target)
     ) {
-      setIsOpen(false);
-      setIsDropdownOpen(false);
+      setIsOpen(false)
+      setIsDropdownOpen(false)
     } else if (
       dropdownRef.current &&
       !dropdownRef.current.contains(event.target)
     ) {
-      setIsDropdownOpen(false);
+      setIsDropdownOpen(false)
     }
-  };
+  }
 
   const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng);
-    setIsDropdownOpen(false);
-  };
+    i18n.changeLanguage(lng)
+    setIsDropdownOpen(false)
+  }
 
   useEffect(() => {
-    document.addEventListener('click', handleClickOutside);
+    document.addEventListener('click', handleClickOutside)
     return () => {
-      document.removeEventListener('click', handleClickOutside);
-    };
-  }, []);
+      document.removeEventListener('click', handleClickOutside)
+    }
+  }, [])
 
   useEffect(() => {
     if (isOpen) {
-      document.body.classList.add('menu-open');
+      document.body.classList.add('menu-open')
     } else {
-      document.body.classList.remove('menu-open');
+      document.body.classList.remove('menu-open')
     }
-  }, [isOpen]);
+  }, [isOpen])
 
   useEffect(() => {
-    setIsOpen(false);
-  }, [location]);
+    setIsOpen(false)
+  }, [location])
 
   return (
     <div ref={menuRef} className={`navigation-menu ${isOpen ? 'menu-open' : ''}`}>
-      <div className="language-selector" ref={dropdownRef}>
-        <div className="language-label" onClick={toggleDropdown}>
+      <div className="language-selector" ref={dropdownRef} onClick={toggleDropdown}>
+        <div className="language-label" >
           <span>{languages.find((l) => l.code === i18n.language.split('-')[0])?.name || 'Language'}</span>
           {languages.find((l) => l.code === i18n.language.split('-')[0]) && (
             <Flag
@@ -121,7 +121,7 @@ function NavigationMenu() {
         </div>
       )}
     </div>
-  );
+  )
 }
 
-export default NavigationMenu;
+export default NavigationMenu

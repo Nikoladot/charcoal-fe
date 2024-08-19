@@ -86,7 +86,34 @@
   margin-bottom: 15px;
 }
 
-.tooltip {
+.contact-card .email-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  display: block;
+  cursor: pointer;
+  position: relative;
+}
+
+.contact-card .email-text:hover::after {
+  content: attr(title);
+  position: absolute;
+  white-space: nowrap;
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  top: -30px; /* Adjust position above the email text */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  font-size: 14px;
+  opacity: 0.9;
+  pointer-events: none; /* Prevents the tooltip from being interactive */
+}
+
+.tooltip-contact {
   position: absolute;
   background-color: #333;
   color: white;
@@ -144,7 +171,7 @@
 }
 
 .contact-card p {
-  font-size: 18px;
+  font-size: 16px;
   margin: 0;
 }
 

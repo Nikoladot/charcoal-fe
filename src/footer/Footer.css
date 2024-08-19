@@ -83,17 +83,55 @@
   justify-content: center;
   gap: 10px;
   font-size: 18px;
+  text-align: left;
+  position: relative; /* Position relative for the tooltip */
 }
 
 .social-item a {
   color: #fff;
   text-decoration: none;
+  padding-left: 5px;
+  text-align: center;
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide overflow */
+  text-overflow: ellipsis; /* Add ellipsis (...) */
+  max-width: 150px; /* Set a max-width to control where the text cuts off */
 }
 
-.social-item a:hover {
-  text-decoration: underline;
+.social-item a:hover .tooltip {
+  visibility: visible; /* Show tooltip on hover */
+  opacity: 1;
 }
 
+.tooltip {
+  visibility: hidden;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%; /* Position the tooltip above the text */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  white-space: nowrap; /* Prevent tooltip from wrapping */
+}
+
+.tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%; /* Arrow at the bottom of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #333 transparent transparent transparent;
+}
+
+/* Footer bottom */
 .footer-bottom {
   text-align: center;
   padding: 10px 0;

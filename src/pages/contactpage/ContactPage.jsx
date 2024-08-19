@@ -61,7 +61,7 @@ function ContactPage() {
 
   return (
     <div className="contact-page">
-      {tooltip && <div className="tooltip" style={{ top: tooltipPosition.top, left: tooltipPosition.left }}>{tooltip}</div>}
+      {tooltip && <div className="tooltip-contact" style={{ top: tooltipPosition.top, left: tooltipPosition.left }}>{tooltip}</div>}
       <div className="hero-section">
         <div className="hero-content-wrapper">
           <h1 className="contact-page-title">{t('contact_us_title')}</h1>
@@ -90,15 +90,15 @@ function ContactPage() {
             {showHoverTooltip && <div className="tooltip-hover">{t('contact_hover_copy_number')}</div>}
           </div>
           <div
-            className={`contact-card ${clickedCard === 'email' ? 'submitted' : ''}`}
-            onClick={(event) => handleCopy('prodajacumura.plv@gmail.com', 'email', event)}
-          >
-            <FontAwesomeIcon icon={clickedCard === 'email' ? faCheckCircle : faEnvelope} className="contact-card-icon" />
-            <h2>Email</h2>
-            <p>prodajacumura.plv@gmail.com</p>
-            {showHoverTooltip && <div className="tooltip-hover">{t('contact_hover_copy_mail')}</div>}
-          </div>
-          <div
+              className={`contact-card ${clickedCard === 'email' ? 'submitted' : ''}`}
+              onClick={(event) => handleCopy('prodajacumura.plv@gmail.com', 'email', event)}
+            >
+              <FontAwesomeIcon icon={clickedCard === 'email' ? faCheckCircle : faEnvelope} className="contact-card-icon" />
+              <h2>Email</h2>
+              <p className="email-text" title="prodajacumura.plv@gmail.com">prodajacumura.plv@gmail.com</p>
+              {showHoverTooltip && <div className="tooltip-hover">{t('contact_hover_copy_mail')}</div>}
+            </div>
+                      <div
             className={`contact-card ${clickedCard === 'instagram' ? 'submitted' : ''}`}
             onClick={handleInstagramRedirect}
           >

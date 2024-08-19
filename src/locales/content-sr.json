@@ -11,10 +11,10 @@
   "contact_tooltip_mail_copied": "E-pošta je kopirana!",
   "contact_tooltip_number_copied": "Broj je kopiran!",
   "introduction": "Mi smo vaša pouzdana veza za uvoz, prodaju i transport visokokvalitetnog ćumura i uglja. Nudimo vrhunske proizvode i usluge koje će zadovoljiti vaše potrebe. Naš ugalj, sa visokom kaloričnom vrednošću, idealan je za domaćinstva i industriju. Garantujemo efikasno sagorevanje i dugotrajnu toplinu, što ga čini ekonomičnim rešenjem.",
-  "making_process_title": "Proces proizvodnje cumura",
+  "making_process_title": "Proces proizvodnje Ćumura",
   "making_process_content": "P.L.V. COM DOO je jedan od retkih proizvođača u regionu koji ćumur pravi na tradicionalan način, koristeći zemljane rupe koje osiguravaju vrhunski kvalitet proizvoda. Proces počinje u šumi, gde se pažljivo selektuju i seku tvrde vrste drveća kao što su hrast, bukva, cer, i grab. Nakon seče, drvo se polako sagoreva u uslovima bez prisustva kiseonika, pod visokom temperaturom, čime se postiže izuzetan kvalitet ćumura.",
-  "how_and_when_title": "Kako I u kojim prilikama se koristi",
-  "how_and_when_content": "Ćumur je sastavni deo ljudskog života već hiljadama godina, a koristi se u raznim oblastima, kao što su kozmetika, medicina, filtriranje vode i poljoprivreda. Ipak, njegova glavna uloga je u kulinarstvu i gastronomiji, gde se ne može zamisliti dobar obrok bez kvalitetnog ćumura koji hrani daje poseban, jedinstveni ukus. Odličan je za roštiljanje sa porodicom i prijateljima, bilo kod kuće ili u prirodi. Naš ćumur je takođe prvi izbor roštilj majstora u restoranima, jer se odlikuje dugotrajnim gorenjem, krupnoćom i visokom kalorijskom vrednošću, što hrani pruža poseban i jedinstven ukus.",
+  "how_and_when_title": "Kako i u kojim prilikama se koristi",
+  "how_and_when_content": "Ćumur je već hiljadama godina prisutan u raznim oblastima poput kozmetike, medicine, filtriranja vode i poljoprivrede, ali je najpoznatiji po svojoj ulozi u kulinarstvu. Nezamisliv je dobar obrok bez kvalitetnog ćumura koji daje hrani jedinstven ukus. Idealan je za roštiljanje s porodicom i prijateljima, a naš ćumur je prvi izbor roštilj majstora zbog dugotrajnog gorenja, krupnoće i visoke kalorijske vrednosti.",
   "package_title": "Pakovanje",
   "package_content": "Pakovanje je ključan proces na koji posebno obraćamo pažnju. Da bi se ćumur kvalitetno upakovao, mora biti potpuno suv. Pre pakovanja, ćumur se prosejava mašinski, a ručno uklanjamo sve nepregorene komade drveta. Ovaj pažljiv pristup osigurava da naš konačni proizvod bude vrhunskog kvaliteta.",
   "our_offer_title": "Naša Ponuda",
@@ -36,5 +36,6 @@
   "contact_us_title": "Kontaktirajte nas",
   "contact_us_content": "Kontaktirajte nas putem navedenih kontakata za sva pitanja i dodatne informacije. Rado ćemo vam pomoći.",
   "gallery_title": "Naša Galerija",
-  "gallery_description": "Pogledajte trenutke koji definišu naš ćumur - od proizvodnje do zadovoljnih kupaca."
+  "gallery_description": "Pogledajte trenutke koji definišu naš ćumur - od proizvodnje do zadovoljnih kupaca.",
+  "click_here_to_view_instagram": "Kliknite ovde da vidite Instagram"
 }

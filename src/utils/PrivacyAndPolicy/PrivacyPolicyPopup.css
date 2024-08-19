@@ -21,13 +21,13 @@
 }
 
 .privacy-popup .privacy-link {
-  color: #4a90e2;
+  color: #4caf50;
   cursor: pointer;
   text-decoration: underline;
 }
 
 .privacy-popup .privacy-link:hover {
-  color: #1e5ea8;
+  color: #1fe426;
 }
 
 .privacy-popup .close-button-privacypopup {
