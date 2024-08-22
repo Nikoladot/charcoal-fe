@@ -1,16 +1,20 @@
-import Image1 from '@/assets/albumone/image1.jpg'
-import Image10 from '@/assets/albumone/image10.webp'
-import Image11 from '@/assets/albumone/image11.webp'
-import Image12 from '@/assets/albumone/image12.png'
-import Image13 from '@/assets/albumone/image13.webp'
-import Image2 from '@/assets/albumone/image2.jpg'
-import Image3 from '@/assets/albumone/image3.jpg'
-import Image4 from '@/assets/albumone/image4.jpg'
-import Image5 from '@/assets/albumone/image5.webp'
-import Image6 from '@/assets/albumone/image6.jpg'
-import Image7 from '@/assets/albumone/image7.webp'
-import Image8 from '@/assets/albumone/image8.jpg'
-import Image9 from '@/assets/albumone/image9.avif'
+import Image1 from '@/assets/gallery/image1.jpg'
+import Image10 from '@/assets/gallery/image10.jpg'
+import Image11 from '@/assets/gallery/image11.jpg'
+import Image12 from '@/assets/gallery/image12.jpg'
+import Image13 from '@/assets/gallery/image13.jpg'
+import Image14 from '@/assets/gallery/image14.jpg'
+import Image15 from '@/assets/gallery/image15.jpg'
+import Image2 from '@/assets/gallery/image2.png'
+import Image3 from '@/assets/gallery/image3.jpg'
+import Image4 from '@/assets/gallery/image4.jpg'
+import Image5 from '@/assets/gallery/image5.png'
+import Image6 from '@/assets/gallery/image6.jpeg'
+import Image7 from '@/assets/gallery/image7.jpeg'
+import Image8 from '@/assets/gallery/image8.jpg'
+import Image9 from '@/assets/gallery/image9.jpg'
+import Image16 from '@/assets/gallery/Image16.jpg'
+import Image17 from '@/assets/making_charcoal.png'
 
 export const albumOneImages = [
   Image1,
@@ -25,5 +29,9 @@ export const albumOneImages = [
   Image10,
   Image11,
   Image12,
-  Image13
+  Image13,
+  Image14,
+  Image15,
+  Image16,
+  Image17
 ]
