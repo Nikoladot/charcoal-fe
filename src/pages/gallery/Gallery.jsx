@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Helmet } from 'react-helmet'
 import { useTranslation } from 'react-i18next'
 
 import { albumOneImages } from '../../utils/imageImports'
@@ -6,7 +7,7 @@ import './Gallery.css'
 import LightBox from './components/LightBox/LightBox'
 
 function Gallery() {
-  const { t } = useTranslation()
+  const { t } = useTranslation('meta', 'content')
 
   const [showLightbox, setShowLightbox] = useState(false)
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -69,10 +70,24 @@ function Gallery() {
 
   return (
     <div className="gallery-page">
+      <Helmet>
+        <title>{t('meta:meta.gallery.title')}</title>
+        <meta name="description" content={t('meta:meta.gallery.description')} />
+        <meta name="keywords" content={t('meta:meta.gallery.keywords')} />
+
+        {/* hreflang tags for SEO */}
+        <link rel="alternate" hreflang="en" href="http://yourdomain.com/en/gallery" />
+        <link rel="alternate" hreflang="sr" href="http://yourdomain.com/sr/gallery" />
+        <link rel="alternate" hreflang="bg" href="http://yourdomain.com/bg/gallery" />
+        <link rel="alternate" hreflang="mk" href="http://yourdomain.com/mk/gallery" />
+        <link rel="alternate" hreflang="sq" href="http://yourdomain.com/sq/gallery" />
+        <link rel="alternate" hreflang="ro" href="http://yourdomain.com/ro/gallery" />
+        <link rel="alternate" hreflang="de" href="http://yourdomain.com/de/gallery" />
+      </Helmet>
       <div className="gallery-header">
-        <h1 className="gallery-heading">{t('gallery_title')}</h1>
+        <h1 className="gallery-heading">{t('content:gallery_title')}</h1>
         <p className="gallery-description">
-          {t('gallery_description')}
+          {t('content:gallery_description')}
         </p>
       </div>
       <div className="gallery-container">

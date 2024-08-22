@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, Router, Routes } from 'react-router-dom'
+import { Route, Routes, Navigate } from 'react-router-dom'
 import AboutUs from './pages/aboutus/AboutUs'
 import ContactPage from './pages/contactpage/ContactPage'
 import Gallery from './pages/gallery/Gallery'
@@ -14,14 +14,18 @@ function App() {
       <ScrollToTop />
       <Layout>
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/gallery" element={<Gallery />} />
-          <Route path="/about" element={<AboutUs />} />
-          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/:lang/homepage" element={<HomePage />} />
+          <Route path="/:lang/gallery" element={<Gallery />} />
+          <Route path="/:lang/about" element={<AboutUs />} />
+          <Route path="/:lang/contact" element={<ContactPage />} />
+          {/* Redirect from root to a default language homepage */}
+          <Route path="/" element={<Navigate to="/en/homepage" />} />
+          {/* Optionally handle any undefined routes */}
+          <Route path="*" element={<Navigate to="/en/homepage" />} />
         </Routes>
       </Layout>
     </>
-  ) 
+  )
 }
 
 export default App

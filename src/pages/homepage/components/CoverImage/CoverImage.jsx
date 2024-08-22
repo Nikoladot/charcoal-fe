@@ -10,7 +10,7 @@ function CoverImage({ image }) {
   useEffect(() => {
     const img = new Image();
     img.src = image;
-    img.onload = () => setIsLoaded(true);
+    img.onload = () => setIsLoaded(true)
   }, [image]);
 
   return (

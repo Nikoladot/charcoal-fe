@@ -18,22 +18,30 @@ import sqPrivacy from './locales/privacy-sq.json'
 import roPrivacy from './locales/privacy-ro.json'
 import dePrivacy from './locales/privacy-de.json'
 
+import enMeta from './locales/meta/meta-en.json'
+import srMeta from './locales/meta/meta-sr.json'
+import bgMeta from './locales/meta/meta-bg.json'
+import mkMeta from './locales/meta/meta-mk.json'
+import sqMeta from './locales/meta/meta-sq.json'
+import roMeta from './locales/meta/meta-ro.json'
+import deMeta from './locales/meta/meta-de.json'
+
 i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
     resources: {
-      en: { content: enContent, privacy: enPrivacy },
-      sr: { content: srContent, privacy: srPrivacy },
-      bg: { content: bgContent, privacy: bgPrivacy },
-      mk: { content: mkContent, privacy: mkPrivacy },
-      sq: { content: sqContent, privacy: sqPrivacy },
-      ro: { content: roContent, privacy: roPrivacy },
-      de: { content: deContent, privacy: dePrivacy }
+      en: { content: enContent, privacy: enPrivacy, meta: enMeta },
+      sr: { content: srContent, privacy: srPrivacy, meta: srMeta },
+      bg: { content: bgContent, privacy: bgPrivacy, meta: bgMeta },
+      mk: { content: mkContent, privacy: mkPrivacy, meta: mkMeta },
+      sq: { content: sqContent, privacy: sqPrivacy, meta: sqMeta },
+      ro: { content: roContent, privacy: roPrivacy, meta: roMeta },
+      de: { content: deContent, privacy: dePrivacy, meta: deMeta }
     },
     fallbackLng: 'en',
-    ns: ['content', 'privacy'], // Specify namespaces
-    defaultNS: 'content', // Set the default namespace
+    ns: ['content', 'privacy', 'meta'],
+    defaultNS: 'content',
     interpolation: {
       escapeValue: false
     }

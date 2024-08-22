@@ -7,7 +7,7 @@ import imageTwo from '../../../../assets/rostilj.jpg'
 import './GeneralInfo.css'
 
 function GeneralInfo() {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
 
   return (
     <div className="general-info-container">

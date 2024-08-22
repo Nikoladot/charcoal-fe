@@ -1,17 +1,18 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import Flag from 'react-world-flags'
 
 import './NavigationMenu.css'
 
 function NavigationMenu() {
-  const { i18n } = useTranslation()
+  const { t, i18n } = useTranslation()
   const [isOpen, setIsOpen] = useState(false)
   const [isDropdownOpen, setIsDropdownOpen] = useState(false)
   const menuRef = useRef(null)
   const dropdownRef = useRef(null)
   const location = useLocation()
+  const navigate = useNavigate()
 
   const languages = [
     { code: 'en', name: 'English', flag: 'GB' },
@@ -48,7 +49,10 @@ function NavigationMenu() {
   }
 
   const changeLanguage = (lng) => {
+    const currentPath = location.pathname
+    const newPath = `/${lng}${currentPath.replace(/\/[a-z]{2}/, '')}`
     i18n.changeLanguage(lng)
+    navigate(newPath)
     setIsDropdownOpen(false)
   }
 
@@ -71,14 +75,16 @@ function NavigationMenu() {
     setIsOpen(false)
   }, [location])
 
+  const currentLanguageCode = i18n.language ? i18n.language.split('-')[0] : 'en'
+
   return (
     <div ref={menuRef} className={`navigation-menu ${isOpen ? 'menu-open' : ''}`}>
       <div className="language-selector" ref={dropdownRef} onClick={toggleDropdown}>
-        <div className="language-label" >
-          <span>{languages.find((l) => l.code === i18n.language.split('-')[0])?.name || 'Language'}</span>
-          {languages.find((l) => l.code === i18n.language.split('-')[0]) && (
+        <div className="language-label">
+          <span>{languages.find((l) => l.code === currentLanguageCode)?.name || 'Language'}</span>
+          {languages.find((l) => l.code === currentLanguageCode) && (
             <Flag
-              code={languages.find((l) => l.code === i18n.language.split('-')[0])?.flag}
+              code={languages.find((l) => l.code === currentLanguageCode)?.flag}
               alt="Flag"
               className="flag-icon"
             />
@@ -106,17 +112,17 @@ function NavigationMenu() {
       </div>
       {isOpen && (
         <div className="dropdown-menu">
-          <Link to="/" className="menu-item" onClick={() => setIsOpen(false)}>
-            {i18n.t('home')}
+          <Link to={`/${currentLanguageCode}/homepage`} className="menu-item" onClick={() => setIsOpen(false)}>
+            {t('home')}
           </Link>
-          <Link to="/gallery" className="menu-item" onClick={() => setIsOpen(false)}>
-            {i18n.t('gallery')}
+          <Link to={`/${currentLanguageCode}/gallery`} className="menu-item" onClick={() => setIsOpen(false)}>
+            {t('gallery')}
           </Link>
-          <Link to="/about" className="menu-item" onClick={() => setIsOpen(false)}>
-            {i18n.t('about')}
+          <Link to={`/${currentLanguageCode}/about`} className="menu-item" onClick={() => setIsOpen(false)}>
+            {t('about')}
           </Link>
-          <Link to="/contact" className="menu-item" onClick={() => setIsOpen(false)}>
-            {i18n.t('contact')}
+          <Link to={`/${currentLanguageCode}/contact`} className="menu-item" onClick={() => setIsOpen(false)}>
+            {t('contact')}
           </Link>
         </div>
       )}

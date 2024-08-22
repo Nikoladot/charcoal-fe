@@ -21,7 +21,7 @@
     "@fortawesome/free-regular-svg-icons": "^6.5.2",
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
-    "@typescript-eslint/utils": "^7.16.1",
+    "@typescript-eslint/utils": "^8.2.0",
     "@vitejs/plugin-react": "^4.3.1",
     "i18next": "^23.12.2",
     "i18next-browser-languagedetector": "^8.0.0",
@@ -29,6 +29,8 @@
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
+    "react-helmet-async": "^2.0.5",
     "react-i18next": "^15.0.0",
     "react-router-dom": "^6.11.2",
     "react-world-flags": "^1.6.0"

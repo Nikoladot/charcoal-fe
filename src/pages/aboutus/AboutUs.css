@@ -118,11 +118,17 @@ form button:hover {
   }
 }
 
+/* Responsive Styles */
 @media (max-width: 991px) {
   .section {
     height: auto;
     flex-direction: column;
     text-align: center;
+  }
+
+  /* Ensure text comes first on smaller screens */
+  .section.lighter-black-background {
+    flex-direction: column-reverse;
   }
 
   .image-container {
