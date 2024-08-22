@@ -43,43 +43,50 @@
 /* Responsive Typography */
 @media (max-width: 1400px) {
   .introduction-section {
-    font-size: 26px; /* Large desktops and monitors */
+    font-size: 30px; /* Large desktops and monitors */
+    bottom: 10vh;
   }
 }
 
 @media (max-width: 1199px) {
   .introduction-section {
-    font-size: 24px; /* Medium desktops and laptops */
+    font-size: 30px; /* Medium desktops and laptops */
+    bottom: 10vh;
   }
 }
 
 @media (max-width: 991px) {
   .introduction-section {
-    font-size: 22px; /* Small desktops and large tablets */
+    font-size: 30px; /* Small desktops and large tablets */
   }
 }
 
 @media (max-width: 767px) {
   .introduction-section {
-    font-size: 20px; /* Tablets and large mobile devices */
-    bottom: 10vh;
+    font-size: 28px; /* Tablets and large mobile devices */
   }
 }
 
 @media (max-width: 600px) {
   .introduction-section {
-    font-size: 18px; /* Small tablets and large mobile devices */
+    font-size: 20px; /* Small tablets and large mobile devices */
     bottom: 5vh;
   }
 }
 
 @media (max-width: 376px) {
   .introduction-section {
-    font-size: 16px; /* Medium to small mobile devices */
+    font-size: 18px; /* Medium to small mobile devices */
     word-spacing: 2px;
     line-height: 1.4;
     bottom: 0vh;
     width: 94%;
+  }
+}
+
+@media (max-width: 1100px) and (max-height: 700px) {
+  .introduction-section {
+    bottom: 0vh;
   }
 }
 
