@@ -105,11 +105,11 @@ function ContactPage() {
           </div>
           <div
               className={`contact-card ${clickedCard === 'email' ? 'submitted' : ''}`}
-              onClick={(event) => handleCopy('prodajacumura.plv@gmail.com', 'email', event)}
+              onClick={(event) => handleCopy('zzlatko44@gmail.com', 'email', event)}
             >
               <FontAwesomeIcon icon={clickedCard === 'email' ? faCheckCircle : faEnvelope} className="contact-card-icon" />
               <h2>Email</h2>
-              <p className="email-text" title="prodajacumura.plv@gmail.com">prodajacumura.plv@gmail.com</p>
+              <p className="email-text" title="zzlatko44@gmail.com">zzlatko44@gmail.com</p>
               {showHoverTooltip && <div className="tooltip-hover">{t('content:contact_hover_copy_mail')}</div>}
             </div>
                       <div

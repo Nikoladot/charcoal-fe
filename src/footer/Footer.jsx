@@ -36,7 +36,7 @@ function Footer({ openPrivacyModal }) {
             <div className="social-items">
               <div className="social-item">
                 <FontAwesomeIcon icon={faEnvelope} />
-                <span>prodajacumura.plv@gmail.com</span>
+                <span>zzlatko44@gmail.com</span>
               </div>
               <div className="social-item">
                 <FontAwesomeIcon icon={faPhone} />

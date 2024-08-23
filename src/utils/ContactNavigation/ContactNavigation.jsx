@@ -62,7 +62,7 @@ function ContactNavigation() {
 
     if (type === 'email') {
       content = {
-        text: 'prodajacumura.plv@gmail.com',
+        text: 'zzlatko44@gmail.com',
         type: 'email',
         options: [
           { label: t('go_to_contact_form'), action: handleRedirectToContactForm },
