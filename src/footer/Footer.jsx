@@ -7,10 +7,15 @@ import {
 import { useTranslation } from 'react-i18next'
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Link, useLocation } from 'react-router-dom'
 import './Footer.css'
 
 function Footer({ openPrivacyModal }) {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
+  const location = useLocation()
+
+  // Get the current language code
+  const currentLanguageCode = i18n.language ? i18n.language.split('-')[0] : 'en'
 
   const handlePrivacyClick = (e) => {
     e.preventDefault()
@@ -51,13 +56,13 @@ function Footer({ openPrivacyModal }) {
             <h2>{t('links')}</h2>
             <ul>
               <li>
-                <a href="/about">{t('about')}</a>
+                <Link to={`/${currentLanguageCode}/about`}>{t('about')}</Link>
               </li>
               <li>
-                <a href="/services">{t('services')}</a>
+                <Link to={`/${currentLanguageCode}/Gallery`}>{t('gallery')}</Link>
               </li>
               <li>
-                <a href="/contact">{t('contact')}</a>
+                <Link to={`/${currentLanguageCode}/contact`}>{t('contact')}</Link>
               </li>
               <li>
                 <a href="#!" onClick={handlePrivacyClick}>

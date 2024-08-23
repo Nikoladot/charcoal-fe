@@ -1,8 +1,8 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import { useTranslation } from 'react-i18next'
-import secondImage from '../../assets/albumone/image1.jpg'
-import firstImage from '../../assets/fire.jpg'
+import secondImage from '../../assets/gallery/image5.png'
+import firstImage from '../../assets/gallery/image14.jpg'
 import './AboutUs.css'
 
 function AboutUs() {
