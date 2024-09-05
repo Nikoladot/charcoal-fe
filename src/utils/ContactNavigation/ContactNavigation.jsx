@@ -94,8 +94,10 @@ function ContactNavigation() {
   }
 
   const handleRedirectToContactForm = () => {
+    // Extract the current language from the URL
+    const currentLang = location.pathname.split('/')[1] || 'en'
     setShowPopup(false)
-    navigate('/contact#contact-form')
+    navigate(`/${currentLang}/contact#contact-form`)
   }
 
   const handleOpenEmailApp = () => {

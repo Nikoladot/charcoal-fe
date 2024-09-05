@@ -76,13 +76,13 @@ function Gallery() {
         <meta name="keywords" content={t('meta:meta.gallery.keywords')} />
 
         {/* hreflang tags for SEO */}
-        <link rel="alternate" hreflang="en" href="http://yourdomain.com/en/gallery" />
-        <link rel="alternate" hreflang="sr" href="http://yourdomain.com/sr/gallery" />
-        <link rel="alternate" hreflang="bg" href="http://yourdomain.com/bg/gallery" />
-        <link rel="alternate" hreflang="mk" href="http://yourdomain.com/mk/gallery" />
-        <link rel="alternate" hreflang="sq" href="http://yourdomain.com/sq/gallery" />
-        <link rel="alternate" hreflang="ro" href="http://yourdomain.com/ro/gallery" />
-        <link rel="alternate" hreflang="de" href="http://yourdomain.com/de/gallery" />
+        <link rel="alternate" hreflang="en" href="https://cumurprodaja-plv.com/en/gallery" />
+        <link rel="alternate" hreflang="sr" href="https://cumurprodaja-plv.com/sr/gallery" />
+        <link rel="alternate" hreflang="bg" href="https://cumurprodaja-plv.com/bg/gallery" />
+        <link rel="alternate" hreflang="mk" href="https://cumurprodaja-plv.com/mk/gallery" />
+        <link rel="alternate" hreflang="sq" href="https://cumurprodaja-plv.com/sq/gallery" />
+        <link rel="alternate" hreflang="ro" href="https://cumurprodaja-plv.com/ro/gallery" />
+        <link rel="alternate" hreflang="de" href="https://cumurprodaja-plv.com/de/gallery" />
       </Helmet>
       <div className="gallery-header">
         <h1 className="gallery-heading">{t('content:gallery_title')}</h1>

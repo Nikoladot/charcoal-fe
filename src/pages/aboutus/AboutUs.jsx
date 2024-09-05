@@ -16,13 +16,13 @@ function AboutUs() {
         <meta name="keywords" content={t('meta:meta.about.keywords')} />
 
         {/* hreflang tags for SEO */}
-        <link rel="alternate" hreflang="en" href="http://yourdomain.com/en/about" />
-        <link rel="alternate" hreflang="sr" href="http://yourdomain.com/sr/about" />
-        <link rel="alternate" hreflang="bg" href="http://yourdomain.com/bg/about" />
-        <link rel="alternate" hreflang="mk" href="http://yourdomain.com/mk/about" />
-        <link rel="alternate" hreflang="sq" href="http://yourdomain.com/sq/about" />
-        <link rel="alternate" hreflang="ro" href="http://yourdomain.com/ro/about" />
-        <link rel="alternate" hreflang="de" href="http://yourdomain.com/de/about" />
+        <link rel="alternate" hreflang="en" href="https://cumurprodaja-plv.com/en/about" />
+        <link rel="alternate" hreflang="sr" href="https://cumurprodaja-plv.com/sr/about" />
+        <link rel="alternate" hreflang="bg" href="https://cumurprodaja-plv.com/bg/about" />
+        <link rel="alternate" hreflang="mk" href="https://cumurprodaja-plv.com/mk/about" />
+        <link rel="alternate" hreflang="sq" href="https://cumurprodaja-plv.com/sq/about" />
+        <link rel="alternate" hreflang="ro" href="https://cumurprodaja-plv.com/ro/about" />
+        <link rel="alternate" hreflang="de" href="https://cumurprodaja-plv.com/de/about" />
       </Helmet>
       <section className="section black-background">
         <div className="text-content txt-cntn-one">

@@ -39,7 +39,7 @@ i18n
       ro: { content: roContent, privacy: roPrivacy, meta: roMeta },
       de: { content: deContent, privacy: dePrivacy, meta: deMeta }
     },
-    fallbackLng: 'en',
+    fallbackLng: 'sr',
     ns: ['content', 'privacy', 'meta'],
     defaultNS: 'content',
     interpolation: {

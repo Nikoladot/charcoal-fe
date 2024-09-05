@@ -67,13 +67,13 @@ function ContactPage() {
         <meta name="keywords" content={t('meta:meta.contact.keywords')} />
 
         {/* hreflang tags for SEO */}
-        <link rel="alternate" hreflang="en" href="http://yourdomain.com/en/contact" />
-        <link rel="alternate" hreflang="sr" href="http://yourdomain.com/sr/contact" />
-        <link rel="alternate" hreflang="bg" href="http://yourdomain.com/bg/contact" />
-        <link rel="alternate" hreflang="mk" href="http://yourdomain.com/mk/contact" />
-        <link rel="alternate" hreflang="sq" href="http://yourdomain.com/sq/contact" />
-        <link rel="alternate" hreflang="ro" href="http://yourdomain.com/ro/contact" />
-        <link rel="alternate" hreflang="de" href="http://yourdomain.com/de/contact" />
+        <link rel="alternate" hreflang="en" href="https://cumurprodaja-plv.com/en/contact" />
+        <link rel="alternate" hreflang="sr" href="https://cumurprodaja-plv.com/sr/contact" />
+        <link rel="alternate" hreflang="bg" href="https://cumurprodaja-plv.com/bg/contact" />
+        <link rel="alternate" hreflang="mk" href="https://cumurprodaja-plv.com/mk/contact" />
+        <link rel="alternate" hreflang="sq" href="https://cumurprodaja-plv.com/sq/contact" />
+        <link rel="alternate" hreflang="ro" href="https://cumurprodaja-plv.com/ro/contact" />
+        <link rel="alternate" hreflang="de" href="https://cumurprodaja-plv.com/de/contact" />
       </Helmet>
       {tooltip && <div className="tooltip-contact" style={{ top: tooltipPosition.top, left: tooltipPosition.left }}>{tooltip}</div>}
       <div className="hero-section">

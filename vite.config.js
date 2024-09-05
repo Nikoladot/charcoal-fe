@@ -6,7 +6,7 @@ export default defineConfig(({ mode }) => {
   const isProduction = mode === 'production'
 
   return {
-    base: isProduction ? '/charcoal-fe/' : '/', // Ensure correct base path
+    base: isProduction ? '/' : '/', // Use '/' for both development and production if deploying to root
     plugins: [react()],
     resolve: {
       alias: {
@@ -15,6 +15,10 @@ export default defineConfig(({ mode }) => {
     },
     server: {
       strictPort: true
+    },
+    build: {
+      outDir: 'dist', // Ensures the output directory is 'dist'
+      emptyOutDir: true, // Cleans the output directory before building
     }
   }
 })
