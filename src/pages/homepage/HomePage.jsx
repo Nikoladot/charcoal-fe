@@ -2,7 +2,7 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import { useTranslation } from 'react-i18next'
 
-import homeImage from '../../assets/charcoal.jpg'
+import homeImage from '../../assets/homepage_charcoal.jpg'
 import CoverImage from './components/CoverImage/CoverImage'
 import GeneralInfo from './components/GeneralInfo/GeneralInfo'
 import OurServices from './components/OurServices/OurServices'
