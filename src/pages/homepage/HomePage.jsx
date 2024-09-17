@@ -8,16 +8,24 @@ import GeneralInfo from './components/GeneralInfo/GeneralInfo'
 import OurServices from './components/OurServices/OurServices'
 
 function HomePage() {
-  const { t } = useTranslation('meta')
+  const { t, i18n } = useTranslation('meta')
+  const currentLanguage = i18n.language
 
   return (
     <div className="container">
       <Helmet>
-        <title>{t('meta.homepage.title')}</title> {/* Adjusted to match the expected keys */}
-        <meta name="description" content={t('meta.homepage.description')} /> {/* Using t instead of i18n.t */}
-        <meta name="keywords" content={t('meta.homepage.keywords')} /> {/* Using t instead of i18n.t */}
+        {/* Dynamic Title, Description, and Keywords */}
+        <title>{t('meta.homepage.title')}</title>
+        <meta name="description" content={t('meta.homepage.description')} />
+        <meta name="keywords" content={t('meta.homepage.keywords')} />
 
-        {/* hreflang tags for SEO */}
+        {/* Canonical Tag for the Current Language Version */}
+        <link
+          rel="canonical"
+          href={`https://cumurprodaja-plv.com/${currentLanguage}/homepage`}
+        />
+
+        {/* hreflang Tags for SEO */}
         <link rel="alternate" hreflang="en" href="https://cumurprodaja-plv.com/en/homepage" />
         <link rel="alternate" hreflang="sr" href="https://cumurprodaja-plv.com/sr/homepage" />
         <link rel="alternate" hreflang="bg" href="https://cumurprodaja-plv.com/bg/homepage" />
