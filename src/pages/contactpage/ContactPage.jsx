@@ -8,29 +8,31 @@ import {
 } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 import { faPhone, faCheckCircle } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome' // <-- Import the FontAwesomeIcon component
-import { useLocation } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { useLocation } from 'react-router-dom'
 
 import './ContactPage.css'
 import ContactForm from './components/ContactForm/ContactForm'
 
 function ContactPage() {
-  const { t } = useTranslation(['meta', 'content'])
+  const { t, i18n } = useTranslation(['meta', 'content'])
   const [tooltip, setTooltip] = useState(null)
   const [tooltipPosition, setTooltipPosition] = useState({})
   const [clickedCard, setClickedCard] = useState(null)
   const [showHoverTooltip, setShowHoverTooltip] = useState(true)
-  const location = useLocation();
+  const location = useLocation()
+
+  const currentLanguage = i18n.language
 
   useEffect(() => {
-    const hash = location.hash;
+    const hash = location.hash
     if (hash) {
-      const element = document.querySelector(hash);
+      const element = document.querySelector(hash)
       if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+        element.scrollIntoView({ behavior: 'smooth' })
       }
     }
-  }, [location]);
+  }, [location])
 
   const handleCopy = (text, type, event) => {
     navigator.clipboard.writeText(text)
@@ -62,9 +64,16 @@ function ContactPage() {
   return (
     <div className="contact-page">
       <Helmet>
+        {/* Dynamic Title, Description, and Keywords */}
         <title>{t('meta:meta.contact.title')}</title>
         <meta name="description" content={t('meta:meta.contact.description')} />
         <meta name="keywords" content={t('meta:meta.contact.keywords')} />
+
+        {/* Canonical Tag for the Current Language Version */}
+        <link
+          rel="canonical"
+          href={`https://cumurprodaja-plv.com/${currentLanguage}/contact`}
+        />
 
         {/* hreflang tags for SEO */}
         <link rel="alternate" hreflang="en" href="https://cumurprodaja-plv.com/en/contact" />
@@ -75,7 +84,11 @@ function ContactPage() {
         <link rel="alternate" hreflang="ro" href="https://cumurprodaja-plv.com/ro/contact" />
         <link rel="alternate" hreflang="de" href="https://cumurprodaja-plv.com/de/contact" />
       </Helmet>
-      {tooltip && <div className="tooltip-contact" style={{ top: tooltipPosition.top, left: tooltipPosition.left }}>{tooltip}</div>}
+      {tooltip && (
+        <div className="tooltip-contact" style={{ top: tooltipPosition.top, left: tooltipPosition.left }}>
+          {tooltip}
+        </div>
+      )}
       <div className="hero-section">
         <div className="hero-content-wrapper">
           <h1 className="contact-page-title">{t('content:contact_us_title')}</h1>
@@ -104,15 +117,15 @@ function ContactPage() {
             {showHoverTooltip && <div className="tooltip-hover">{t('content:contact_hover_copy_number')}</div>}
           </div>
           <div
-              className={`contact-card ${clickedCard === 'email' ? 'submitted' : ''}`}
-              onClick={(event) => handleCopy('zzlatko44@gmail.com', 'email', event)}
-            >
-              <FontAwesomeIcon icon={clickedCard === 'email' ? faCheckCircle : faEnvelope} className="contact-card-icon" />
-              <h2>Email</h2>
-              <p className="email-text" title="zzlatko44@gmail.com">zzlatko44@gmail.com</p>
-              {showHoverTooltip && <div className="tooltip-hover">{t('content:contact_hover_copy_mail')}</div>}
-            </div>
-                      <div
+            className={`contact-card ${clickedCard === 'email' ? 'submitted' : ''}`}
+            onClick={(event) => handleCopy('zzlatko44@gmail.com', 'email', event)}
+          >
+            <FontAwesomeIcon icon={clickedCard === 'email' ? faCheckCircle : faEnvelope} className="contact-card-icon" />
+            <h2>Email</h2>
+            <p className="email-text" title="zzlatko44@gmail.com">zzlatko44@gmail.com</p>
+            {showHoverTooltip && <div className="tooltip-hover">{t('content:contact_hover_copy_mail')}</div>}
+          </div>
+          <div
             className={`contact-card ${clickedCard === 'instagram' ? 'submitted' : ''}`}
             onClick={handleInstagramRedirect}
           >
@@ -122,11 +135,11 @@ function ContactPage() {
           </div>
         </div>
       </div>
-      <div className='top-to-bottom-fade'></div>
+      <div className="top-to-bottom-fade"></div>
       <div className="contact-form-section">
         <ContactForm />
       </div>
-      <div className='bottom-to-top-fade'></div>
+      <div className="bottom-to-top-fade"></div>
     </div>
   )
 }

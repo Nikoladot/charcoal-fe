@@ -6,16 +6,24 @@ import firstImage from '../../assets/gallery/image14.jpg'
 import './AboutUs.css'
 
 function AboutUs() {
-  const { t } = useTranslation(['meta', 'content'])
+  const { t, i18n } = useTranslation(['meta', 'content', 'alt-meta'])
+  const currentLanguage = i18n.language
 
   return (
     <div className="about-us">
       <Helmet>
+        {/* Dynamic Title, Description, and Keywords */}
         <title>{t('meta:meta.about.title')}</title>
         <meta name="description" content={t('meta:meta.about.description')} />
         <meta name="keywords" content={t('meta:meta.about.keywords')} />
 
-        {/* hreflang tags for SEO */}
+        {/* Canonical Tag for the Current Language Version */}
+        <link
+          rel="canonical"
+          href={`https://cumurprodaja-plv.com/${currentLanguage}/about`}
+        />
+
+        {/* hreflang Tags for SEO */}
         <link rel="alternate" hreflang="en" href="https://cumurprodaja-plv.com/en/about" />
         <link rel="alternate" hreflang="sr" href="https://cumurprodaja-plv.com/sr/about" />
         <link rel="alternate" hreflang="bg" href="https://cumurprodaja-plv.com/bg/about" />
@@ -30,13 +38,13 @@ function AboutUs() {
           <p>{t('content:about_us_content')}</p>
         </div>
         <div className="image-container right-image">
-          <img src={firstImage} alt="About Us" />
+          <img src={firstImage} alt={t('alt-meta:alt.about-us-alt-one')} /> {/* Updated alt */}
         </div>
       </section>
       <div className="line"></div>
       <section className="section lighter-black-background">
         <div className="image-container left-image">
-          <img src={secondImage} alt="Our Team" />
+          <img src={secondImage} alt={t('alt-meta:alt.about-us-alt-two')} /> {/* Updated alt */}
         </div>
         <div className="text-content txt-cntn-two">
           <h1>{t('content:our_team_title')}</h1>

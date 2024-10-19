@@ -26,21 +26,30 @@ import sqMeta from './locales/meta/meta-sq.json'
 import roMeta from './locales/meta/meta-ro.json'
 import deMeta from './locales/meta/meta-de.json'
 
+import enAltMeta from './locales/meta/alt-meta-en.json'
+import srAltMeta from './locales/meta/alt-meta-sr.json'
+import bgAltMeta from './locales/meta/alt-meta-bg.json'
+import mkAltMeta from './locales/meta/alt-meta-mk.json'
+import sqAltMeta from './locales/meta/alt-meta-sq.json'
+import roAltMeta from './locales/meta/alt-meta-ro.json'
+import deAltMeta from './locales/meta/alt-meta-de.json'
+
+
 i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
     resources: {
-      en: { content: enContent, privacy: enPrivacy, meta: enMeta },
-      sr: { content: srContent, privacy: srPrivacy, meta: srMeta },
-      bg: { content: bgContent, privacy: bgPrivacy, meta: bgMeta },
-      mk: { content: mkContent, privacy: mkPrivacy, meta: mkMeta },
-      sq: { content: sqContent, privacy: sqPrivacy, meta: sqMeta },
-      ro: { content: roContent, privacy: roPrivacy, meta: roMeta },
-      de: { content: deContent, privacy: dePrivacy, meta: deMeta }
+      en: { content: enContent, privacy: enPrivacy, meta: enMeta, 'alt-meta': enAltMeta },
+      sr: { content: srContent, privacy: srPrivacy, meta: srMeta, 'alt-meta': srAltMeta },
+      bg: { content: bgContent, privacy: bgPrivacy, meta: bgMeta, 'alt-meta': bgAltMeta },
+      mk: { content: mkContent, privacy: mkPrivacy, meta: mkMeta, 'alt-meta': mkAltMeta },
+      sq: { content: sqContent, privacy: sqPrivacy, meta: sqMeta, 'alt-meta': sqAltMeta },
+      ro: { content: roContent, privacy: roPrivacy, meta: roMeta, 'alt-meta': roAltMeta },
+      de: { content: deContent, privacy: dePrivacy, meta: deMeta, 'alt-meta': deAltMeta }
     },
     fallbackLng: 'sr',
-    ns: ['content', 'privacy', 'meta'],
+    ns: ['content', 'privacy', 'meta', 'alt-meta'], // Add 'alt-meta' to namespaces
     defaultNS: 'content',
     interpolation: {
       escapeValue: false

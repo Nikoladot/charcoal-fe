@@ -1,12 +1,12 @@
 import React from 'react'
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next'
 
 import imageTwo from '../../../../assets/bag.jpg'
 import imageOne from '../../../../assets/wholesale.jpg'
 import './OurServices.css'
 
 function OurServices() {
-  const { t } = useTranslation();
+  const { t } = useTranslation('content', 'alt-meta')
 
   return (
     <div className="our-services">
@@ -17,7 +17,7 @@ function OurServices() {
             <div className="card-description">
               {t('our_offer_wholesale')}
             </div>
-            <img src={imageOne} alt="Service 1" className="card-image" />
+            <img src={imageOne} alt={t('alt.our_services_wholesale')} className="card-image" />
           </div>
         </div>
         <div className="card">
@@ -25,7 +25,7 @@ function OurServices() {
             <div className="card-description">
               {t('our_offer_bags')}
             </div>
-            <img src={imageTwo} alt="Service 2" className="card-image" />
+            <img src={imageTwo} alt={t('alt.our_services_bags')} className="card-image" />
           </div>
         </div>
       </div>

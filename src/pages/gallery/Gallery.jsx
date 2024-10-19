@@ -7,19 +7,20 @@ import './Gallery.css'
 import LightBox from './components/LightBox/LightBox'
 
 function Gallery() {
-  const { t } = useTranslation('meta', 'content')
+  const { t, i18n } = useTranslation(['meta', 'content', 'alt-meta'])
+  const currentLanguage = i18n.language
 
   const [showLightbox, setShowLightbox] = useState(false)
   const [currentIndex, setCurrentIndex] = useState(0)
   const [visibleImages, setVisibleImages] = useState(
-    Array(albumOneImages.length).fill(false)
+    Array(albumOneImages(t).length).fill(false) // Pass t here
   )
 
   useEffect(() => {
     const staggeredIndexes = [
-      ...Array(Math.min(6, albumOneImages.length)).keys()
+      ...Array(Math.min(6, albumOneImages(t).length)).keys()
     ]
-    const remainingIndexes = [...Array(albumOneImages.length).keys()].slice(6)
+    const remainingIndexes = [...Array(albumOneImages(t).length).keys()].slice(6)
 
     staggeredIndexes.forEach((index, i) => {
       setTimeout(() => {
@@ -40,7 +41,7 @@ function Gallery() {
         return newState
       })
     }, staggeredIndexes.length * 500)
-  }, [])
+  }, [t]) // Add t as a dependency
 
   const openLightbox = (index) => {
     setCurrentIndex(index)
@@ -52,13 +53,13 @@ function Gallery() {
   }
 
   const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % albumOneImages.length)
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % albumOneImages(t).length)
   }
 
   const handlePrev = () => {
     setCurrentIndex(
       (prevIndex) =>
-        (prevIndex - 1 + albumOneImages.length) % albumOneImages.length
+        (prevIndex - 1 + albumOneImages(t).length) % albumOneImages(t).length
     )
   }
 
@@ -71,9 +72,16 @@ function Gallery() {
   return (
     <div className="gallery-page">
       <Helmet>
+        {/* Dynamic Title, Description, and Keywords */}
         <title>{t('meta:meta.gallery.title')}</title>
         <meta name="description" content={t('meta:meta.gallery.description')} />
         <meta name="keywords" content={t('meta:meta.gallery.keywords')} />
+        
+        {/* Canonical Tag for the Current Language Version */}
+        <link
+          rel="canonical"
+          href={`https://cumurprodaja-plv.com/${currentLanguage}/gallery`}
+        />
 
         {/* hreflang tags for SEO */}
         <link rel="alternate" hreflang="en" href="https://cumurprodaja-plv.com/en/gallery" />
@@ -91,7 +99,7 @@ function Gallery() {
         </p>
       </div>
       <div className="gallery-container">
-        {albumOneImages.map((src, index) => (
+        {albumOneImages(t).map((image, index) => ( // Call the function here
           <div
             key={index}
             className={`image-card ${visibleImages[index] ? 'fade-in' : ''}`}
@@ -100,13 +108,13 @@ function Gallery() {
             onClick={() => openLightbox(index)}
             onKeyDown={(e) => handleKeyDown(e, index)}
           >
-            <img src={src} alt={`description ${index}`} className="image" />
+            <img src={image.src} alt={t(`alt-meta:${image.alt}`)} className="image" /> {/* Use image.alt */}
           </div>
         ))}
       </div>
       {showLightbox && (
         <LightBox
-          images={albumOneImages}
+          images={albumOneImages(t).map(image => image.src)} // Pass the image sources
           currentIndex={currentIndex}
           onClose={closeLightbox}
           onNext={handleNext}
@@ -118,3 +126,4 @@ function Gallery() {
 }
 
 export default Gallery
+
