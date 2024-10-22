@@ -6,11 +6,12 @@ import './PrivacyPolicyPopup.css'
 
 const PrivacyPolicyPopup = ({ onClose }) => {
   const { t } = useTranslation('privacy')
-  const [shouldShowPopup, setShouldShowPopup] = useState(false)
+  const [shouldShowPopup, setShouldShowPopup] = useState(false) // Initial state is false
   const [isModalOpen, setIsModalOpen] = useState(false)
 
   useEffect(() => {
     const userAcknowledged = sessionStorage.getItem('privacyAcknowledged')
+    // Set shouldShowPopup to true only if the user hasn't acknowledged it
     if (!userAcknowledged) {
       setShouldShowPopup(true)
     }
@@ -18,7 +19,7 @@ const PrivacyPolicyPopup = ({ onClose }) => {
 
   const handleAcknowledge = () => {
     sessionStorage.setItem('privacyAcknowledged', 'true')
-    setShouldShowPopup(false)
+    setShouldShowPopup(false) // Hide popup after acknowledgment
   }
 
   const handleOpenModal = () => {
@@ -30,7 +31,7 @@ const PrivacyPolicyPopup = ({ onClose }) => {
   }
 
   if (!shouldShowPopup) {
-    return null
+    return null // Don't render anything if the popup should not show
   }
 
   return (
