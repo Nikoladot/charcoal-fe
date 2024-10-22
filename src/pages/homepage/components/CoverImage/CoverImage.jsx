@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next'
 import './CoverImage.css'
 
 function CoverImage({ image }) {
-  const { t } = useTranslation('alt-meta')
+  const { t } = useTranslation('alt-meta', 'content')
   const [isLoaded, setIsLoaded] = useState(false)
 
   useEffect(() => {
@@ -27,8 +27,9 @@ function CoverImage({ image }) {
           <img className="cover-img" src={image} alt={t('alt.homepage-img-alt')} />
           <div className="text-overlay">
             <div className="logo-fade"></div>
-            <img className="logo" src={logo} alt="Logo" />
+            <img className="logo" src={logo} alt="prodaja cumura vranje" />
           </div>
+          <h1 className='homepage-title'>{t('content:homepage_title')}</h1>
           <IntroductionSection />
           <div className="bottom-fade"></div>
         </>

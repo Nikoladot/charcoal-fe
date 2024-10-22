@@ -26,6 +26,21 @@
   animation: spin 1s linear infinite;
 }
 
+.homepage-title {
+  color: white;
+  margin: 0;
+  top: 57vh;
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  text-align: center;
+  width: 100%;
+  padding: 0 20px; /* Ensure padding is applied */
+  box-sizing: border-box; /* Include padding within the element’s width */
+  white-space: normal;
+  z-index: 3;
+}
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -99,6 +114,10 @@
 
 /* Responsive Styles */
 @media (max-width: 1400px) {
+  .homepage-title {
+    font-size: 32px;
+  }
+
   .logo-fade {
     width: 420px;
     height: 220px;
@@ -111,6 +130,10 @@
 }
 
 @media (max-width: 1199px) {
+  .homepage-title {
+    font-size: 32px;
+  }
+
   .logo-fade {
     width: 690px;
     height: 350px;
@@ -123,6 +146,11 @@
 }
 
 @media (max-width: 991px) {
+  .homepage-title {
+    font-size: 30px;
+    padding: 0 30px;
+  }
+
   .logo-fade {
     width: 520px;
     height: 270px;
@@ -135,6 +163,10 @@
 }
 
 @media (max-width: 768px) {
+  .homepage-title {
+    font-size: 26px;
+  }
+
   .logo-fade {
     width: 400px;
     height: 200px;
@@ -149,6 +181,10 @@
 }
 
 @media (max-width: 576px) {
+  .homepage-title {
+    font-size: 20px;
+  }
+
   .logo-fade {
     width: 320px;
     height: 170px;
@@ -163,6 +199,10 @@
 }
 
 @media (max-width: 375px) {
+  .homepage-title {
+    font-size: 18px;
+  }
+
   .logo-fade {
     width: 280px;
     height: 150px;

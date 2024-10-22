@@ -1,6 +1,6 @@
 .introduction-section {
   position: absolute;
-  bottom: 20vh; /* Adjust as needed to fit the red box position */
+  top: 65vh; /* Adjust as needed to fit the red box position */
   left: 50%;
   transform: translateX(-50%);
   width: 85%;
