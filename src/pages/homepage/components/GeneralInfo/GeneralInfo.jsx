@@ -1,9 +1,9 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 
-import imageThree from '../../../../assets/charcoalMaking.jpg'
-import imageOne from '../../../../assets/making_charcoal.png'
-import imageTwo from '../../../../assets/rostilj.jpg'
+import imageThree from '../../../../assets/charcoalMaking.webp'
+import imageOne from '../../../../assets/making_charcoal.webp'
+import imageTwo from '../../../../assets/rostilj.webp'
 import './GeneralInfo.css'
 
 function GeneralInfo() {
@@ -16,11 +16,11 @@ function GeneralInfo() {
           <img className="gi-img" src={imageOne} alt={t('alt.general-imgOne')} />
         </div>
         <div className="grid-item description first-description">
-          <h1>{t('making_process_title')}</h1>
+          <h2>{t('making_process_title')}</h2>
           <p>{t('making_process_content')}</p>
         </div>
         <div className="grid-item description second-description">
-          <h1>{t('how_and_when_title')}</h1>
+          <h2>{t('how_and_when_title')}</h2>
           <p>{t('how_and_when_content')}</p>
         </div>
         <div className="grid-item info-img second-img">
@@ -30,7 +30,7 @@ function GeneralInfo() {
           <img className="gi-img" src={imageThree} alt={t('alt.general-imgThree')} />
         </div>
         <div className="grid-item description third-description">
-          <h1>{t('package_title')}</h1>
+          <h2>{t('package_title')}</h2>
           <p>{t('package_content')}</p>
         </div>
       </div>

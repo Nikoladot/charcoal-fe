@@ -1,8 +1,8 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 
-import imageTwo from '../../../../assets/bag.jpg'
-import imageOne from '../../../../assets/wholesale.jpg'
+import imageTwo from '../../../../assets/bag.webp'
+import imageOne from '../../../../assets/wholesale.webp'
 import './OurServices.css'
 
 function OurServices() {
@@ -10,7 +10,7 @@ function OurServices() {
 
   return (
     <div className="our-services">
-      <h1 className="our-services-title">{t('our_offer_title')}</h1>
+      <h2 className="our-services-title">{t('our_offer_title')}</h2>
       <div className="our-services-cards">
         <div className="card">
           <div className="card-content">
