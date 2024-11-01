@@ -64,18 +64,15 @@ function ContactPage() {
   return (
     <div className="contact-page">
       <Helmet>
-        {/* Dynamic Title, Description, and Keywords */}
         <title>{t('meta:meta.contact.title')}</title>
         <meta name="description" content={t('meta:meta.contact.description')} />
         <meta name="keywords" content={t('meta:meta.contact.keywords')} />
 
-        {/* Canonical Tag for the Current Language Version */}
         <link
           rel="canonical"
           href={`https://cumurprodaja-plv.com/${currentLanguage}/contact`}
         />
-
-        {/* hreflang tags for SEO */}
+        <link rel="alternate" hreflang="x-default" href="https://cumurprodaja-plv.com/sr/contact" />
         <link rel="alternate" hreflang="en" href="https://cumurprodaja-plv.com/en/contact" />
         <link rel="alternate" hreflang="sr" href="https://cumurprodaja-plv.com/sr/contact" />
         <link rel="alternate" hreflang="bg" href="https://cumurprodaja-plv.com/bg/contact" />

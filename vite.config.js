@@ -19,6 +19,7 @@ export default defineConfig(({ mode }) => {
     build: {
       outDir: 'dist', // Ensures the output directory is 'dist'
       emptyOutDir: true, // Cleans the output directory before building
+      sourcemap: true // Enable source maps in production
     }
   }
 })

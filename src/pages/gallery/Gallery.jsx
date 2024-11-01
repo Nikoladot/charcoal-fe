@@ -13,7 +13,7 @@ function Gallery() {
   const [showLightbox, setShowLightbox] = useState(false)
   const [currentIndex, setCurrentIndex] = useState(0)
   const [visibleImages, setVisibleImages] = useState(
-    Array(albumOneImages(t).length).fill(false) // Pass t here
+    Array(albumOneImages(t).length).fill(false)
   )
 
   useEffect(() => {
@@ -41,7 +41,7 @@ function Gallery() {
         return newState
       })
     }, staggeredIndexes.length * 500)
-  }, [t]) // Add t as a dependency
+  }, [t])
 
   const openLightbox = (index) => {
     setCurrentIndex(index)
@@ -91,6 +91,9 @@ function Gallery() {
         <link rel="alternate" hreflang="sq" href="https://cumurprodaja-plv.com/sq/gallery" />
         <link rel="alternate" hreflang="ro" href="https://cumurprodaja-plv.com/ro/gallery" />
         <link rel="alternate" hreflang="de" href="https://cumurprodaja-plv.com/de/gallery" />
+        
+        {/* x-default hreflang for unspecified languages */}
+        <link rel="alternate" hreflang="x-default" href="https://cumurprodaja-plv.com/sr/gallery" />
       </Helmet>
       <div className="gallery-header">
         <h1 className="gallery-heading">{t('content:gallery_title')}</h1>
@@ -99,7 +102,7 @@ function Gallery() {
         </p>
       </div>
       <div className="gallery-container">
-        {albumOneImages(t).map((image, index) => ( // Call the function here
+        {albumOneImages(t).map((image, index) => (
           <div
             key={index}
             className={`image-card ${visibleImages[index] ? 'fade-in' : ''}`}
@@ -108,13 +111,13 @@ function Gallery() {
             onClick={() => openLightbox(index)}
             onKeyDown={(e) => handleKeyDown(e, index)}
           >
-            <img src={image.src} alt={t(`alt-meta:${image.alt}`)} className="image" /> {/* Use image.alt */}
+            <img src={image.src} alt={t(`alt-meta:${image.alt}`)} className="image" />
           </div>
         ))}
       </div>
       {showLightbox && (
         <LightBox
-          images={albumOneImages(t).map(image => image.src)} // Pass the image sources
+          images={albumOneImages(t).map(image => image.src)}
           currentIndex={currentIndex}
           onClose={closeLightbox}
           onNext={handleNext}
@@ -126,4 +129,3 @@ function Gallery() {
 }
 
 export default Gallery
-

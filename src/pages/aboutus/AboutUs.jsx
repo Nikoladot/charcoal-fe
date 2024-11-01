@@ -24,6 +24,7 @@ function AboutUs() {
         />
 
         {/* hreflang Tags for SEO */}
+        <link rel="alternate" hreflang="x-default" href="https://cumurprodaja-plv.com/sr/about" />
         <link rel="alternate" hreflang="en" href="https://cumurprodaja-plv.com/en/about" />
         <link rel="alternate" hreflang="sr" href="https://cumurprodaja-plv.com/sr/about" />
         <link rel="alternate" hreflang="bg" href="https://cumurprodaja-plv.com/bg/about" />
@@ -38,13 +39,13 @@ function AboutUs() {
           <p>{t('content:about_us_content')}</p>
         </div>
         <div className="image-container right-image">
-          <img src={firstImage} alt={t('alt-meta:alt.about-us-alt-one')} /> {/* Updated alt */}
+          <img src={firstImage} alt={t('alt-meta:alt.about-us-alt-one')} />
         </div>
       </section>
       <div className="line"></div>
       <section className="section lighter-black-background">
         <div className="image-container left-image">
-          <img src={secondImage} alt={t('alt-meta:alt.about-us-alt-two')} /> {/* Updated alt */}
+          <img src={secondImage} alt={t('alt-meta:alt.about-us-alt-two')} />
         </div>
         <div className="text-content txt-cntn-two">
           <h1>{t('content:our_team_title')}</h1>

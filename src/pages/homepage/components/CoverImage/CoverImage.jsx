@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
-import logo from '../../../../assets/Logo/logo-transparent-png.png'
+import logo from '../../../../assets/Logo/logo-transparent.png'
 import IntroductionSection from '../IntroductionSection/IntroductionSection'
 import { useTranslation } from 'react-i18next'
 import './CoverImage.css'

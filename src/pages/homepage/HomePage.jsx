@@ -26,6 +26,7 @@ function HomePage() {
         />
 
         {/* hreflang Tags for SEO */}
+        <link rel="alternate" hreflang="x-default" href="https://cumurprodaja-plv.com/sr/homepage" />
         <link rel="alternate" hreflang="en" href="https://cumurprodaja-plv.com/en/homepage" />
         <link rel="alternate" hreflang="sr" href="https://cumurprodaja-plv.com/sr/homepage" />
         <link rel="alternate" hreflang="bg" href="https://cumurprodaja-plv.com/bg/homepage" />
