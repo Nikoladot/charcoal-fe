@@ -24,6 +24,18 @@ function NavigationMenu() {
     { code: 'de', name: 'Deutsch', flag: 'DE' }
   ]
 
+  useEffect(() => {
+    // Detect language from URL or default to Serbian
+    const pathParts = location.pathname.split('/')
+    const langInUrl = pathParts[1]
+
+    if (!languages.some((lang) => lang.code === langInUrl)) {
+      navigate(`/sr${location.pathname}`)
+    } else {
+      i18n.changeLanguage(langInUrl)
+    }
+  }, [location, navigate, i18n, languages])
+
   const toggleMenu = () => {
     setIsOpen(!isOpen)
   }
@@ -50,7 +62,7 @@ function NavigationMenu() {
 
   const changeLanguage = (lng) => {
     const currentPath = location.pathname
-    const newPath = `/${lng}${currentPath.replace(/\/[a-z]{2}/, '')}`
+    const newPath = `/${lng}${currentPath.replace(/^\/[a-z]{2}/, '')}`
     i18n.changeLanguage(lng)
     navigate(newPath)
     setIsDropdownOpen(false)

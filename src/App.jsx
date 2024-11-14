@@ -19,11 +19,11 @@ function App() {
           <Route path="/:lang/about" element={<AboutUs />} />
           <Route path="/:lang/contact" element={<ContactPage />} />
           {/* Redirect from root to a default language homepage */}
-          <Route path="/" element={<Navigate to="/en/homepage" />} />
+          <Route path="/" element={<Navigate to="/sr/homepage" />} />
           {/* Optionally handle any undefined routes */}
-          <Route path="*" element={<Navigate to="/en/homepage" />} />
+          <Route path="*" element={<Navigate to="/sr/homepage" />} />
         </Routes>
-      </Layout>
+      </Layout>s
     </>
   )
 }
