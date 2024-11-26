@@ -25,7 +25,6 @@ function NavigationMenu() {
   ]
 
   useEffect(() => {
-    // Detect language from URL or default to Serbian
     const pathParts = location.pathname.split('/')
     const langInUrl = pathParts[1]
 
@@ -34,7 +33,7 @@ function NavigationMenu() {
     } else {
       i18n.changeLanguage(langInUrl)
     }
-  }, [location, navigate, i18n, languages])
+  }, [location, navigate, i18n])
 
   const toggleMenu = () => {
     setIsOpen(!isOpen)

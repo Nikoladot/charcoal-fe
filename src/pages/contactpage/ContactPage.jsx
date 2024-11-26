@@ -72,7 +72,7 @@ function ContactPage() {
           rel="canonical"
           href={`https://cumurprodaja-plv.com/${currentLanguage}/contact`}
         />
-        <link rel="alternate" hreflang="x-default" href="https://cumurprodaja-plv.com/sr/contact" />
+        <link rel="alternate" hreflang="x-default" href="https://cumurprodaja-plv.com/contact" />
         <link rel="alternate" hreflang="en" href="https://cumurprodaja-plv.com/en/contact" />
         <link rel="alternate" hreflang="sr" href="https://cumurprodaja-plv.com/sr/contact" />
         <link rel="alternate" hreflang="bg" href="https://cumurprodaja-plv.com/bg/contact" />

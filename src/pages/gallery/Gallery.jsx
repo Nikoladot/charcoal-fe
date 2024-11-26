@@ -93,7 +93,7 @@ function Gallery() {
         <link rel="alternate" hreflang="de" href="https://cumurprodaja-plv.com/de/gallery" />
         
         {/* x-default hreflang for unspecified languages */}
-        <link rel="alternate" hreflang="x-default" href="https://cumurprodaja-plv.com/sr/gallery" />
+        <link rel="alternate" hreflang="x-default" href="https://cumurprodaja-plv.com/gallery" />
       </Helmet>
       <div className="gallery-header">
         <h1 className="gallery-heading">{t('content:gallery_title')}</h1>

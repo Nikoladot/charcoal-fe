@@ -24,7 +24,7 @@ function AboutUs() {
         />
 
         {/* hreflang Tags for SEO */}
-        <link rel="alternate" hreflang="x-default" href="https://cumurprodaja-plv.com/sr/about" />
+        <link rel="alternate" hreflang="x-default" href="https://cumurprodaja-plv.com/about" />
         <link rel="alternate" hreflang="en" href="https://cumurprodaja-plv.com/en/about" />
         <link rel="alternate" hreflang="sr" href="https://cumurprodaja-plv.com/sr/about" />
         <link rel="alternate" hreflang="bg" href="https://cumurprodaja-plv.com/bg/about" />
