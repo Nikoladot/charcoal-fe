@@ -13,11 +13,13 @@ import Image6 from '@/assets/gallery/image6.webp'
 import Image7 from '@/assets/gallery/image7.webp'
 import Image8 from '@/assets/gallery/image8.webp'
 import Image9 from '@/assets/gallery/image9.webp'
-import Image16 from '@/assets/gallery/image16.webp'
-import Image20 from '@/assets/gallery/image17.webp'
-import Image18 from '@/assets/gallery/image18.webp'
-import Image19 from '@/assets/gallery/image19.webp'
+import Image16 from '@/assets/gallery/Image16.webp'
+import Image16 from '@/assets/gallery/Image17.webp'
+import Image16 from '@/assets/gallery/Image18.webp'
+import Image16 from '@/assets/gallery/Image19.webp'
 import Image17 from '@/assets/making_charcoal.webp'
+import Image18 from '@/assets/gallery/Image18.webp'
+import Image19 from '@/assets/gallery/Image19.webp'
 
 export const albumOneImages = (translations) => {
   return [
@@ -29,7 +31,6 @@ export const albumOneImages = (translations) => {
     { src: Image6, alt: translations('alt.image6') },
     { src: Image7, alt: translations('alt.image7') },
     { src: Image8, alt: translations('alt.image8') },
-    { src: Image9, alt: translations('alt.image9') },
     { src: Image10, alt: translations('alt.image10') },
     { src: Image11, alt: translations('alt.image11') },
     { src: Image12, alt: translations('alt.image12') },
@@ -37,9 +38,7 @@ export const albumOneImages = (translations) => {
     { src: Image14, alt: translations('alt.image14') },
     { src: Image15, alt: translations('alt.image15') },
     { src: Image16, alt: translations('alt.image16') },
-    { src: Image20, alt: translations('alt.image20') },
-    { src: Image18, alt: translations('alt.image18') },
-    { src: Image19, alt: translations('alt.image19') }
+    { src: Image17, alt: translations('alt.image17') }
   ]
 }
 

@@ -1,15 +1,9 @@
-import React, { useEffect, useRef } from 'react'
+import React from 'react'
+
 import PropTypes from 'prop-types'
 import './LightBox.css'
 
 function Lightbox({ images, currentIndex, onClose, onNext, onPrev }) {
-  const overlayRef = useRef(null)
-
-  useEffect(() => {
-    // Auto-focus overlay when component mounts
-    overlayRef.current?.focus()
-  }, [])
-
   const handleNext = () => {
     onNext()
   }
@@ -19,40 +13,23 @@ function Lightbox({ images, currentIndex, onClose, onNext, onPrev }) {
   }
 
   const handleClose = (e) => {
-    // Close only if click is outside the image content
-    if (e?.target?.classList?.contains('lightbox-overlay')) {
+    // Check if the click was outside the image content
+    if (e.target.classList.contains('lightbox-overlay')) {
       onClose()
-    }
-  }
-
-  const handleKeyDown = (e) => {
-    switch (e.key) {
-      case 'Enter':
-      case ' ':
-        handleClose()
-        break
-      case 'ArrowLeft':
-        handlePrev()
-        break
-      case 'ArrowRight':
-        handleNext()
-        break
-      case 'Escape':
-        onClose()
-        break
-      default:
-        break
     }
   }
 
   return (
     <div
-      ref={overlayRef}
       className="lightbox-overlay"
       onClick={handleClose}
       role="button"
       tabIndex={0}
-      onKeyDown={handleKeyDown}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          handleClose()
+        }
+      }}
     >
       <div className="lightbox-content">
         <div className="lightbox-navigation">
@@ -65,7 +42,7 @@ function Lightbox({ images, currentIndex, onClose, onNext, onPrev }) {
         </div>
         <img
           src={images[currentIndex]}
-          alt={`Description ${currentIndex}`}
+          alt={`Description  ${currentIndex}`}
           className="lightbox-image"
         />
       </div>
@@ -78,7 +55,7 @@ Lightbox.propTypes = {
   currentIndex: PropTypes.number.isRequired,
   onClose: PropTypes.func.isRequired,
   onNext: PropTypes.func.isRequired,
-  onPrev: PropTypes.func.isRequired,
+  onPrev: PropTypes.func.isRequired
 }
 
 export default Lightbox

@@ -37,7 +37,7 @@ export const albumOneImages = (translations) => {
     { src: Image14, alt: translations('alt.image14') },
     { src: Image15, alt: translations('alt.image15') },
     { src: Image16, alt: translations('alt.image16') },
-    { src: Image20, alt: translations('alt.image20') },
+    { src: Image17, alt: translations('alt.image17') },
     { src: Image18, alt: translations('alt.image18') },
     { src: Image19, alt: translations('alt.image19') }
   ]

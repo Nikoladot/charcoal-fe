@@ -14,7 +14,7 @@ import Image7 from '@/assets/gallery/image7.webp'
 import Image8 from '@/assets/gallery/image8.webp'
 import Image9 from '@/assets/gallery/image9.webp'
 import Image16 from '@/assets/gallery/image16.webp'
-import Image20 from '@/assets/gallery/image17.webp'
+import Image17 from '@/assets/gallery/image17.webp'
 import Image18 from '@/assets/gallery/image18.webp'
 import Image19 from '@/assets/gallery/image19.webp'
 import Image17 from '@/assets/making_charcoal.webp'
@@ -37,7 +37,7 @@ export const albumOneImages = (translations) => {
     { src: Image14, alt: translations('alt.image14') },
     { src: Image15, alt: translations('alt.image15') },
     { src: Image16, alt: translations('alt.image16') },
-    { src: Image20, alt: translations('alt.image20') },
+    { src: Image17, alt: translations('alt.image17') },
     { src: Image18, alt: translations('alt.image18') },
     { src: Image19, alt: translations('alt.image19') }
   ]
