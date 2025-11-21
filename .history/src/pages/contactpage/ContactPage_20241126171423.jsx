@@ -52,7 +52,7 @@ function ContactPage() {
   const handleInstagramRedirect = () => {
     try {
       setClickedCard('instagram')
-      window.open('https://www.instagram.com/plvcom_charcoal?igsh=dWhlcml4Yno5ZWF0', '_blank')
+      window.open('https://www.instagram.com/charcoal_serbia.export/', '_blank')
       setTimeout(() => {
         setClickedCard(null)
       }, 2000)

@@ -112,7 +112,7 @@ function ContactNavigation() {
   return (
     <>
       <div className="social-media-icons">
-        <a href="https://www.instagram.com/plvcom_charcoal?igsh=dWhlcml4Yno5ZWF0" target="_blank">
+        <a href="https://www.instagram.com/charcoal_serbia.export?igsh=NjE5c2Y2bG4zbWt3" target="_blank">
           <FontAwesomeIcon icon={faInstagram} className="icon" size="xl" />
         </a>
         <span onClick={() => handleIconClick('email')}>
